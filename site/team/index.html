@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap - Prebuilt Layout</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  </body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="index.html">Home - last edit: 10/24</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+		   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav">
+				 <li class="nav-item active">
+					<a class="nav-link" href="./project/index.html">Project Description</a>
+				 </li>
+				 <li class="nav-item">
+					<a class="nav-link" href="/team/index.html">Team/About Us</a>
+				 </li>
+				 <li class="nav-item">
+					<a class="nav-link" href="./gallery/index.html">Gallery</a>
+				 </li>
+					<li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle" href="#" id="robotsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Robots
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="robotsDropdown">
+						<a class="dropdown-item" href="./robot1/index.html">Robot 1</a>
+						<a class="dropdown-item" href="robot2.html">Robot 2</a>
+					  </div>
+					</li>
+			  </ul>
+		   </div>
+    </nav>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center">Team / About Us</h1>
+    <p class="text-center">Meet our team members and mentors.</p>
+    <hr>
+
+    <section class="my-4">
+      <h2>Team Members</h2>
+<ul>
+  <li>
+    <strong>Freddy Rivera – Project Manager</strong><br>
+    Oversees overall project coordination, scheduling, communication, and documentation.
+    Ensures cross-team alignment between mechanical and electrical subsystems, manages prototype
+    integration, and leads client presentations and deliverables.
+  </li>
+
+  <li>
+    <strong>Andres Gonzales – System Controls Lead</strong><br>
+    Responsible for designing and tuning the control algorithms for both robots, including PID
+    development, sensor integration, and real-time software behavior. Collaborates closely with the 
+    electrical team to ensure stable and accurate system response.
+  </li>
+
+  <li>
+    <strong>Colin Parsinia – Manufacturing Lead (Robot 1)</strong><br>
+    Leads CAD modeling and fabrication for Robot 1, including 3D-printed components, mechanical
+    assemblies, and fit-and-function testing. Ensures manufacturability, structural integrity,
+    and compatibility with the electrical subsystem.
+  </li>
+
+  <li>
+    <strong>Florence Fasugbe – Manufacturing Lead (Robot 2)</strong><br>
+    Responsible for CAD development and prototyping of Robot 2’s mechanical components, including
+    the dynamic beam mechanism and platform supports. Supports iterative testing and refinement
+    based on system performance and client feedback.
+  </li>
+
+  <li>
+    <strong>Ziyi Tang – Budget Liaison</strong><br>
+    Manages project purchasing, tracks spending, and ensures the team stays within budget
+    constraints. Coordinates part sourcing, lead times, and vendor communication to maintain
+    smooth prototyping progress throughout the semester.
+  </li>
+</ul>
+
+		  
+        <!-- Add more members as needed -->
+      </ul>
+    </section>
+
+    <section class="my-4">
+     <h2>Mentors and Sponsors</h2>
+      <ul>
+        <li><a href="https://example.nau.edu/dwilly" target="_blank">Dr. David Willy</a></li>
+        <li><a href="https://example.nau.edu/mshafer" target="_blank">Dr. Michael Shafer</a></li>
+      </ul>
+    </section>
+
+    <footer class="text-center my-5">
+      <p>&copy; 2026 Traveling Robotics Team</p>
+    </footer>
+  </div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!-- Popper.js (required for dropdowns) -->
+<script src="js/popper.min.js"></script>
+</body>
+</html>
