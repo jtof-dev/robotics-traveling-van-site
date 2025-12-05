@@ -6,10 +6,9 @@ on:
   push:
     branches: ["main"]
     paths:
-      - 'site/index.html'
-      - 'site/styles.css'
-      - 'site/script.js'
-      # - 'site/calendar.ics'
+      - "site/index.html"
+      - "site/*/index.html"
+      - "site/styles.css"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -41,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'site/'
+          path: "site/"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
