@@ -1,170 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap - Prebuilt Layout</title>
 
-<head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Bootstrap - Prebuilt Layout</title>
-
-   <!-- Bootstrap -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-
-<body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="index.html">Home - last edit: 10/24</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav">
-            <li class="nav-item active">
-               <a class="nav-link" href="project.html">Project Description</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="team.html">Team/About Us</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="robotsDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  Robots
-               </a>
-               <div class="dropdown-menu" aria-labelledby="robotsDropdown">
-                  <a class="dropdown-item" href="robot1.html">Robot 1</a>
-                  <a class="dropdown-item" href="robot2.html">Robot 2</a>
-               </div>
-            </li>
-         </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/project/">Project Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/team/">Team/About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gallery/">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="robotsDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Robots
+            </a>
+            <div class="dropdown-menu" aria-labelledby="robotsDropdown">
+              <a class="dropdown-item" href="/robot1/">Robot 1</a>
+              <a class="dropdown-item" href="/robot2/">Robot 2</a>
+            </div>
+          </li>
+        </ul>
       </div>
-   </nav>
-   <div class="d-flex justify-content-center my-3">
+    </nav>
+    <div class="d-flex justify-content-center my-3">
       <form class="form-inline my-2 my-lg-0">
-         <input class="form-control mr-sm-2" type="search" placeholder="Type Here" aria-label="Search">
-         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Type Here"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
       </form>
-   </div>
-   <div class="jumbotron jumbotron-fluid text-center">
-      <h1 class="display-4">Robotics Traveling Van&nbsp;&nbsp;</h1>
-      <p class="lead">Bringing engineering and robotics to K-12!</p>
-      <hr class="my-4">
-      <p>THIS WEBSITE IS LIIIVVEEE!!!!!!!&nbsp;</p>
-      <p class="lead">
-         <a class="btn btn-primary btn-lg" href="#" role="button">tentaive gofund me link!</a>
-      </p>
-   </div>
-   <div class="container">
-      <div class="row text-center">
-         <div class="col-lg-6 offset-lg-3">Por ahora, esto esta bien, aunque estoy bien cansado y quiero dormir y comer,
-            al fin se ha hecho. </div>
-      </div>
-      <br>
-      <hr>
-      <br>
-      <div class="row">
-         <div class="col-md-4">
-            <div class="card">
-               <img class="card-img-top" src="images/card-img.png" alt="Card image cap">
-               <div class="card-body">
-                  <h4 class="card-title">stuff for robot 1</h4>
-                  <p class="card-text">Something useful eventually</p>
-                  <br><br>
-                  <a href="robot1.html" class="btn btn-primary">Check out Robot 1!</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-4">
-            <div class="card">
-               <div class="card-body">
-                  <h5 class="card-title">This project made possible by...&nbsp;</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Sponsors/Mentors</h6>
+      <div class="container my-5">
+        <!-- Title -->
+        <h1 class="text-center mb-4">Traveling Robotics Van (RTV)</h1>
+        <p class="text-center lead">
+          An interactive K–12 outreach project focused on teaching engineering
+          principles through hands-on robotics demonstrations.
+        </p>
+        <hr />
+
+        <!-- Project Overview -->
+        <section class="my-5">
+          <h2>Project Overview</h2>
+          <p>
+            The Traveling Robotics Van (RTV) project aims to develop portable,
+            engaging robotic systems that introduce K–12 students to mechanical
+            engineering, electronics, and programming. Our 2025–2026 project
+            includes the development of two demonstration robots: a
+            self-balancing pendulum robot (Robot 1) and a ball-on-beam control
+            robot (Robot 2). These robots are designed to be durable,
+            transportable, and educational, allowing future outreach teams to
+            easily teach core STEM concepts through live demonstrations.
+          </p>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section class="text-center my-4">
+          <a href="/project/" class="btn btn-primary mx-2"
+            >Project Description</a
+          >
+          <a href="/robot1/" class="btn btn-secondary mx-2">Robot 1</a>
+          <a href="/robot2/" class="btn btn-secondary mx-2">Robot 2</a>
+        </section>
+
+        <!-- Robot Summary Cards -->
+        <section class="my-5">
+          <h2 class="mb-3">Our Robots</h2>
+
+          <div class="row">
+            <!-- Robot 1 -->
+            <div class="col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="images/Robot1_Prototype.jpg"
+                  class="card-img-top"
+                  alt="Robot 1 Prototype"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Robot 1 – Self-Balancing Pendulum</h5>
                   <p class="card-text">
-                     <a href="https://www.ceias.nau.edu/people/david-willy" target="_blank">Dr. David Willy</a>
+                    A reaction-wheel-based pendulum robot used to teach concepts
+                    such as PID control, angular momentum, and dynamic
+                    stability. Designed to be rugged and portable for repeated
+                    outreach demonstrations.
                   </p>
-                  <p class="card-text">Capstone Mentor, Robotics Traveling Van</p>
+                  <a href="/robot1/" class="btn btn-outline-primary"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
 
+            <!-- Robot 2 -->
+            <div class="col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="images/Robot2_Prototype.jpg"
+                  class="card-img-top"
+                  alt="Robot 2 Prototype"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Robot 2 – Ball-on-Beam System</h5>
                   <p class="card-text">
-                     <a href="https://www.ceias.nau.edu/people/michael-shafer" target="_blank">Dr. Michael Shafer</a>
+                    A control-theory demonstration robot that uses a
+                    stepper-motor-driven beam to balance a rolling ball. This
+                    system teaches students about feedback control, sensors, and
+                    dynamic response in real-world engineering.
                   </p>
-                  <p class="card-text">Capstone Sponsor, Robotics Traveling Van</p>
+                  <a href="/robot2/" class="btn btn-outline-primary"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-               </div>
-            </div>
-            <br>
-            <br />
-            <div class="card">
-               <div class="card-header">
-                  Featured
-               </div>
-               <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
-               </ul>
-            </div>
-         </div>
-         <div class="col-md-4">
-            <div class="card">
-               <img class="card-img-top" src="images/card-img.png" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Stuff for robot 2&nbsp;</h5>
-                  <p class="card-text">Some text to build on robot content.</p>
-               </div>
-
-               <div class="card-body">
-                  <h4 class="card-title">stuff for robot 2</h4>
-                  <p class="card-text">Something useful eventually</p>
-                  <br><br>
-                  <a href="robot1.html" class="btn btn-primary">Check out Robot 2!</a>
-               </div>
-            </div>
-         </div>
+        <footer class="text-center my-5">
+          <p>&copy; 2026 Traveling Robotics Team</p>
+        </footer>
       </div>
-      <br />
-      <br />
+
+      <hr />
       <div class="row">
-         <div class=" col-md-4"> Project Info </div>
-         <div class="col-md-4 "> Project Info</div>
-         <div class="col-md-4 "> Project Info </div>
+        <div class="text-center col-lg-6 offset-lg-3">
+          <h4>Footer</h4>
+          <p>NAU shoutout</p>
+        </div>
       </div>
-      <br />
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
 
-      <hr>
-      <div class="row">
-         <div class="text-center col-lg-6 offset-lg-3">
-            <h4>Footer </h4>
-            <p>NAU shoutout</p>
-         </div>
-      </div>
-   </div>
-   <script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/popper.min.js"></script>
+    <script>
       function navigateSite() {
-         const query = document.getElementById('siteSearch').value.toLowerCase();
+        const query = document.getElementById("siteSearch").value.toLowerCase();
 
-         // Map search terms to pages
-         const pages = {
-            'project': 'project.html',
-            'team': 'team.html',
-            'about': 'team.html',
-            'gallery': 'gallery.html',
-            'robot1': 'robot1.html',
-            'robot2': 'robot2.html'
-         };
+        // Map search terms to pages
+        const pages = {
+          project: "/project/index.html",
+          team: "/team/index.html",
+          about: "/team/index.html",
+          gallery: "/gallery/index.html",
+          robot1: "/robot1/index.html",
+          robot2: "/robot2/index.html",
+        };
 
-         if (pages[query]) {
-            window.location.href = pages[query];  // redirect
-         } else {
-            alert("Page not found! Try: project, team, gallery, robot1, robot2");
-         }
+        if (pages[query]) {
+          window.location.href = pages[query]; // redirect
+        } else {
+          alert("Page not found! Try: project, team, gallery, robot1, robot2");
+        }
 
-         return false;  // prevent default form submission
+        return false; // prevent default form submission
       }
-   </script>
-</body>
-
+    </script>
+  </body>
 </html>

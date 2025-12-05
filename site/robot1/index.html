@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap - Prebuilt Layout</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Home</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/project/">Project Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/team/">Team/About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gallery/index.html">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="robotsDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Robots
+            </a>
+            <div class="dropdown-menu" aria-labelledby="robotsDropdown">
+              <a class="dropdown-item" href="/robot1/">Robot 1</a>
+              <a class="dropdown-item" href="/robot2/">Robot 2</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <h1 class="text-center">Robot 1</h1>
+      <p class="text-center">Overview and details about Robot 1.</p>
+      <hr />
+
+      <div class="text-center my-4">
+        <img
+          src="/images/Robot1_Prototype.jpg"
+          alt="Robot 1 Prototype"
+          class="img-fluid"
+          style="max-width: 500px"
+        />
+        <p class="text-muted">
+          Robot 1 – Inverted Pendulum Educational Prototype
+        </p>
+      </div>
+
+      <section class="my-4">
+        <h2>Description</h2>
+        <p>
+          Robot 1 is a two-wheeled inverted pendulum designed to demonstrate
+          real-time feedback control and dynamic stability for K–12 STEM
+          outreach. The robot actively balances itself by measuring its tilt
+          angle, computing corrections through a PID controller, and adjusting
+          wheel motion to stay upright. This allows students to interact with
+          the robot physically while observing how control systems respond to
+          disturbances.
+        </p>
+        <p>
+          The mechanical frame was designed for durability and portability,
+          meeting strict safety and impact requirements including a 30-inch drop
+          test. The system integrates an Arduino-based controller, dual DC
+          motors with encoders, a potentiometer or IMU for tilt sensing, a
+          layered chassis for organized electronics, and optional touchscreen or
+          user-interface elements for classroom interaction. All components were
+          selected to be low-cost and mass-producible for deployment in the
+          Robotics Traveling Van outreach program.
+        </p>
+        <p>
+          This prototype serves as a hands-on demonstration of core engineering
+          concepts such as system modeling, instability, feedback loops, and
+          controller tuning. It also lays the foundation for future
+          enhancements, including expanded data visualization and improved user
+          interaction for classroom demonstrations.
+        </p>
+      </section>
+
+      <!--
+    <section class="my-4">
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="docs/robot1-manual.pdf" target="_blank">Robot 1 Manual (PDF)</a></li>
+      </ul>
+    </section> -->
+
+      <footer class="text-center my-5">
+        <p>&copy; 2026 Traveling Robotics Team</p>
+      </footer>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js (required for dropdowns) -->
+    <script src="/js/popper.min.js"></script>
+  </body>
+</html>
