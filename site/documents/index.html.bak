@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap - Prebuilt Layout</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="../">Home</a>
+  <div class="navbar-brand">
+    <button class="navbar-toggler" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li class="dropdown-item">
+        <a class="nav-link" href="../project/">Project Description</a>
+      </li>
+      <li class="dropdown-item">
+        <a class="nav-link" href="../team/">Team/About Us</a>
+      </li>
+      <li class="dropdown-item">
+        <a class="nav-link" href="../gallery/">Gallery</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="dropdown-item" href="../robot1/">Robot 1</a>
+      </li>
+      <li class="dropdown-item">
+        <a class="dropdown-item" href="../robot2/">Robot 2</a>
+      </li>
+  </div>
+  <div class="d-flex justify-content-center my-3">
+    <form class="form-inline my-2 my-lg-0" onsubmit="return navigateSite()">
+      <input class="form-control mr-sm-2" id="siteSearch" type="search" placeholder="Type Here" aria-label="Search" />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </div>
+
+    <div class="container my-5">
+      <h1 class="text-center mb-4">Project Documents</h1>
+      <p class="text-center mb-4">Download project-related PDFs and files here.</p>
+      <p> <a href="Presentation1_Robotics_Traveling_Van.pdf" target="_blank">Presentation 1</a>&nbsp;</p>
+      <p>&nbsp; <a href="Presentation2.pdf" target="_blank">Presentation 2</a>&nbsp;</p>
+      <p>&nbsp; <a href="Presentation3.pdf" target="_blank">Presentation 3</a> </p>
+      <p>&nbsp; <a href="Report1.pdf" target="_blank">Report 1</a> </p>
+      <p>&nbsp; <a href="Report2.pdf" target="_blank">Report 2</a> </p>
+      <p>&nbsp; <a href="Robot1_CAD.pdf" target="_blank">Robot 1 Prototype CAD</a> </p>
+      <p>&nbsp; <a href="Robot_CAD.pdf" target="_blank">Robot 2 Prototype CAD</a> </p>
+      <hr>
+
+      <section id="requirements" class="my-4">
+        <h2>Requirements</h2>
+        <p>Link to <a href="../docs/requirements.pdf" target="_blank">Requirements PDF</a></p>
+      </section>
+
+      <section id="specifications" class="my-4">
+        <h2>Specifications</h2>
+        <p>Link to <a href="../docs/specifications.pdf" target="_blank">Specifications PDF</a></p>
+      </section>
+
+      <section id="progress" class="my-4">
+        <h2>Progress Report</h2>
+        <p>Link to <a href="../docs/progress_report.pdf" target="_blank">Progress Report PDF</a></p>
+      </section>
+
+      <section id="final" class="my-4">
+        <h2>Final Report</h2>
+        <p>Link to <a href="../docs/final_report.pdf" target="_blank">Final Report PDF</a></p>
+      </section>
+
+      <footer class="text-center my-5">
+        <p>&copy; 2026 Traveling Robotics Team</p>
+      </footer>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script>
+    function navigateSite() {
+      const query = document.getElementById("siteSearch").value.toLowerCase();
+
+      // Map search terms to pages
+      const pages = {
+        project: "../project/index.html",
+        team: "../team/index.html",
+        about: "../team/index.html",
+        gallery: "../gallery/index.html",
+        robot1: "../robot1/index.html",
+        robot2: "../robot2/index.html",
+      };
+
+      if (pages[query]) {
+        window.location.href = pages[query]; // redirect
+      } else {
+        alert("Page not found! Try: project, team, gallery, robot1, robot2");
+      }
+
+      return false; // prevent default form submission
+    }
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  </body>
+
+</html>
