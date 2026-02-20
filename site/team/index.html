@@ -12,54 +12,59 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <body class="d-flex flex-column min-vh-100">
+  
+<!-- begin header -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand btn btn-dark" href="../">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+
+        <a class="navbar-brand btn btn-dark" href="../">
           <img
-          src="../assets/RTVBrandmarkNoOutline.png"
+          src="../assets/RTVBrandmarkNoOutline.webp"
           alt="RTV Logo"
           height="40"
           class="me-2"
           />
           Home
         </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="../project/">Project Description</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../team/">Team/About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../gallery/">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../documents/">Documents</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Robots
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../robot1/">Robot 1</a></li>
-              <li><a class="dropdown-item" href="../robot2/">Robot 2</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex" onsubmit="return navigateSite()">
-          <input class="form-control me-2" id="siteSearch" type="search" placeholder="Type Here" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../project/">Project Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../team/">Team/About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../gallery/">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../documents/">Documents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../robot1/">Robot 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../robot2/">Robot 2</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+
+<!-- end header -->
 
   <div class="container my-5 flex-grow-1">
     <h1 class="text-center">Team / About Us</h1>
@@ -67,82 +72,7 @@
     <hr>
 
     <section class="my-4">
-      <h2>Team Members</h2>
       <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="../assets/images/headshot_placeholder.png" class="card-img-top" alt="Headshot of Freddy Rivera">
-            <div class="card-body">
-              <h5 class="card-title">Freddy Rivera – Project Manager</h5>
-              <p class="card-text">Oversees overall project coordination, scheduling, communication, and documentation.
-                Ensures cross-team alignment between mechanical and electrical subsystems, manages prototype
-                integration, and leads client presentations and deliverables.</p>
-              <a href="#" class="btn btn-primary">LinkedIn</a>
-              <a href="#" class="btn btn-secondary">Resume</a>
-              <a href="#" class="btn btn-info">Portfolio</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="../assets/images/headshot_placeholder.png" class="card-img-top" alt="Headshot of Andres Gonzales">
-            <div class="card-body">
-              <h5 class="card-title">Andres Gonzales – System Controls Lead</h5>
-              <p class="card-text">Responsible for designing and tuning the control algorithms for both robots, including PID
-                development, sensor integration, and real-time software behavior. Collaborates closely with the
-                electrical team to ensure stable and accurate system response.</p>
-              <a href="#" class="btn btn-primary">LinkedIn</a>
-              <a href="#" class="btn btn-secondary">Resume</a>
-              <a href="#" class="btn btn-info">Portfolio</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="../assets/images/headshot_placeholder.png" class="card-img-top" alt="Headshot of Colin Parsinia">
-            <div class="card-body">
-              <h5 class="card-title">Colin Parsinia – Manufacturing Lead (Robot 1)</h5>
-              <p class="card-text">Leads CAD modeling and fabrication for Robot 1, including 3D-printed components, mechanical
-                assemblies, and fit-and-function testing. Ensures manufacturability, structural integrity,
-                and compatibility with the electrical subsystem.</p>
-              <a href="#" class="btn btn-primary">LinkedIn</a>
-              <a href="#" class="btn btn-secondary">Resume</a>
-              <a href="#" class="btn btn-info">Portfolio</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="../assets/images/headshot_placeholder.png" class="card-img-top" alt="Headshot of Florence Fasugbe">
-            <div class="card-body">
-              <h5 class="card-title">Florence Fasugbe – Manufacturing Lead (Robot 2)</h5>
-              <p class="card-text">Responsible for CAD development and prototyping of Robot 2’s mechanical components, including
-                the dynamic beam mechanism and platform supports. Supports iterative testing and refinement
-                based on system performance and client feedback.</p>
-              <a href="#" class="btn btn-primary">LinkedIn</a>
-              <a href="#" class="btn btn-secondary">Resume</a>
-              <a href="#" class="btn btn-info">Portfolio</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="../assets/images/headshot_placeholder.png" class="card-img-top" alt="Headshot of Ziyi Tang">
-            <div class="card-body">
-              <h5 class="card-title">Ziyi Tang – Budget Liaison</h5>
-              <p class="card-text">Manages project purchasing, tracks spending, and ensures the team stays within budget
-                constraints. Coordinates part sourcing, lead times, and vendor communication to maintain
-                smooth prototyping progress throughout the semester.</p>
-              <a href="#" class="btn btn-primary">LinkedIn</a>
-              <a href="#" class="btn btn-secondary">Resume</a>
-              <a href="#" class="btn btn-info">Portfolio</a>
-            </div>
-          </div>
-        </div>
         <div class="col-md-4 mb-4">
           <div class="card">
             <img src="../assets/images/headshot_placeholder.png" class="card-img-top" alt="Headshot of Kyle Draper">
@@ -224,35 +154,35 @@
     </section>
 
   </div>
-  <footer class="p-0 bg-dark container-fluid d-flex flex-column justify-content-center align-items-center text-white">
-      <p class="mt-3">Made with love by the Robotics Traveling Van Capstone Team</p>
-      <p>This <a class="text-decoration-none" href="https://github.com/jtof-dev/robotics-traveling-van-site" target="_blank">website</a> is
-        open-source, and is licensed under <a class="text-decoration-none"  href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank"
-          >agpl-3</a></p>
-  </footer>
-  <script>
-    function navigateSite() {
-      const query = document.getElementById("siteSearch").value.toLowerCase();
 
-      // Map search terms to pages
-      const pages = {
-        project: "../project/",
-        team: "./",
-        about: "./",
-        gallery: "../gallery/",
-        robot1: "../robot1/",
-        robot2: "../robot2/",
-      };
+<!-- begin footer -->
 
-      if (pages[query]) {
-        window.location.href = pages[query]; // redirect
-      } else {
-        alert("Page not found! Try: project, team, gallery, robot1, robot2");
-      }
+    <footer
+      class="p-0 bg-dark container-fluid d-flex flex-column justify-content-center align-items-center text-white"
+    >
+      <p class="mt-3">
+        Made with love by the Robotics Traveling Van Capstone Team
+      </p>
+      <p>
+        This
+        <a
+          class="text-decoration-none"
+          href="https://github.com/jtof-dev/robotics-traveling-van-site"
+          target="_blank"
+          >website</a
+        >
+        is open-source, and is licensed under
+        <a
+          class="text-decoration-none"
+          href="https://www.gnu.org/licenses/agpl-3.0.html"
+          target="_blank"
+          >agpl-3</a
+        >
+      </p>
+    </footer>
 
-      return false; // prevent default form submission
-    }
-  </script>
+<!-- end footer -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
