@@ -1,14 +1,23 @@
+// Get the directory where THIS script is located
+const scriptDir = new URL('.', import.meta.url).pathname;
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
   const htmlElement = document.documentElement;
 
+  // This builds the path relative to script.js
+  // Example: if script is at /js/script.js, this looks for /js/../assets/icons/
+  const ICON_PATHS = {
+    dark: new URL('../assets/icons/darkMode.svg', import.meta.url).href,
+    light: new URL('../assets/icons/lightMode.svg', import.meta.url).href
+  };
+
   const savedTheme = localStorage.getItem("theme") || "dark";
   setTheme(savedTheme);
 
   toggleBtn.addEventListener("click", () => {
-    if (themeIcon.classList.contains("spinning")) return; // Prevent multiple clicks
-
+    if (themeIcon.classList.contains("spinning")) return;
     themeIcon.classList.add("spinning");
 
     const currentTheme = htmlElement.getAttribute("data-bs-theme");
@@ -16,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       setTheme(newTheme, false);
-    }, 250); // Half of the 0.5s animation
+    }, 250);
 
     setTimeout(() => {
       themeIcon.classList.remove("spinning");
@@ -29,11 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (save) {
       localStorage.setItem("theme", theme);
     }
-
-    if (theme === "dark") {
-      themeIcon.src = "../assets/icons/darkMode.svg";
-    } else {
-      themeIcon.src = "../assets/icons/lightMode.svg";
-    }
+    
+    // Use the dynamically generated absolute URL
+    themeIcon.src = ICON_PATHS[theme];
   }
 });

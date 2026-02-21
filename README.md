@@ -29,3 +29,5 @@
 - [x] rework top bar
 - [x] really overhaul the home page
   - possibly combine most / all sections into one long, scrolling page with animations and all that
+- [ ] fix page flashing dark while changing pages on light mode
+- [ ] fix icons blinking while switching pages
