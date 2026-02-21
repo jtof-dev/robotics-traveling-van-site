@@ -6,56 +6,68 @@
 
 /* inter-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("./assets/fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* inter-500 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("./assets/fonts/inter-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* inter-600 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url("./assets/fonts/inter-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-600.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* outfit-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
-  src: url("./assets/fonts/outfit-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/outfit-v15-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* outfit-500 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
-  src: url("./assets/fonts/outfit-v15-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/outfit-v15-latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* outfit-600 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Outfit";
   font-style: normal;
   font-weight: 600;
-  src: url("./assets/fonts/outfit-v15-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/outfit-v15-latin-600.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 body {
@@ -63,6 +75,15 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+a {
+  color: var(--rtv-primary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--rtv-primary-hover);
 }
 
 body,
@@ -95,14 +116,20 @@ h6,
 
 /* --- CUSTOM LIGHT THEME (Softer, Warmer) --- */
 [data-bs-theme="light"] {
-  --bs-body-bg: #efe8e2; /* Warmer, deeper oat/beige */
-  --bs-body-color: #3b2f2f; /* Deep warm brown/charcoal text */
+  --bs-body-bg: #efe8e2;
+  /* Warmer, deeper oat/beige */
+  --bs-body-color: #3b2f2f;
+  /* Deep warm brown/charcoal text */
 
-  --rtv-primary: #b84335; /* Rich rust/ruddy red */
-  --rtv-primary-hover: #8f3126; /* Darker terracotta for hover */
+  --rtv-primary: #b84335;
+  /* Rich rust/ruddy red */
+  --rtv-primary-hover: #8f3126;
+  /* Darker terracotta for hover */
 
-  --header-bg: #62261f; /* Medium dusty clay/brick */
-  --footer-bg: #e4dcd5; /* Warm stone footer */
+  --header-bg: #62261f;
+  /* Medium dusty clay/brick */
+  --footer-bg: #e4dcd5;
+  /* Warm stone footer */
   --footer-text: #5c4d4a;
 
   --secondary-border: #a89a95;
@@ -111,13 +138,17 @@ h6,
 
 /* --- CUSTOM DARK THEME --- */
 [data-bs-theme="dark"] {
-  --bs-body-bg: #121826; /* Deep midnight blue */
-  --bs-body-color: #e2e8f0; /* Soft slate text */
+  --bs-body-bg: #121826;
+  /* Deep midnight blue */
+  --bs-body-color: #e2e8f0;
+  /* Soft slate text */
 
-  --rtv-primary: #f07159; /* Vibrant coral/rust */
+  --rtv-primary: #f07159;
+  /* Vibrant coral/rust */
   --rtv-primary-hover: #d95840;
 
-  --header-bg: #090c14; /* Very dark navy/black for depth */
+  --header-bg: #090c14;
+  /* Very dark navy/black for depth */
   --footer-bg: #090c14;
   --footer-text: #64748b;
 
@@ -135,11 +166,13 @@ h6,
 }
 
 .navbar-brand {
-  font-size: 1.2rem !important; /* Smaller home link */
+  font-size: 1.2rem !important;
+  /* Smaller home link */
 }
 
 .navbar-nav .nav-link {
-  font-size: 1.1rem; /* Larger other links */
+  font-size: 1.1rem;
+  /* Larger other links */
 }
 
 /* Footer */
@@ -150,13 +183,6 @@ h6,
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-}
-.custom-footer a {
-  color: var(--rtv-primary);
-  transition: color 0.2s ease;
-}
-.custom-footer a:hover {
-  color: var(--rtv-primary-hover);
 }
 
 /* Custom Primary Button */
@@ -169,14 +195,17 @@ h6,
 }
 
 [data-bs-theme="dark"] .btn-custom-primary {
-  color: #0f172a; /* Dark text for contrast */
+  color: #0f172a;
+  /* Dark text for contrast */
   font-weight: 600;
 }
+
 .btn-custom-primary:hover {
   background-color: var(--rtv-primary-hover);
   border-color: var(--rtv-primary-hover);
   color: #ffffff;
 }
+
 [data-bs-theme="dark"] .btn-custom-primary:hover {
   color: #ffffff;
 }
@@ -200,7 +229,11 @@ h6,
 .theme-btn {
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .theme-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
@@ -236,9 +269,31 @@ h6,
 }
 
 .tab-content > .tab-pane {
-  display: none;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out;
 }
 
-.tab-content > .active {
-  display: block;
+.tab-content > .tab-pane.show {
+  transform: translateY(0);
+}
+
+
+.theme-btn .theme-icon-img {
+  filter: invert(1);
+}
+
+.theme-icon-img.spinning {
+  animation: spin 0.5s ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,8 +1,14 @@
 # robotics-traveling-van-site
 
 - deployed to [github pages](https://jtof-dev.github.io/robotics-traveling-van-site/)
-
 - current outdated site is live [here](https://www.ceias.nau.edu/capstone/projects/ME/2026/F25toSp26_TravelingRobotics/)
+
+# notes
+
+- header and footer sections for each webpage is seperated by `<!-- {{end of header}} -->` and `<!-- {{start of footer}} -->` comments respectively
+- these are used to seperate out the re-usable sections in `site/index.html`, which are then applied to every other page in `site/**/index.html`
+- to update the header or footer, apply the changes to `site/index.html`, then run `python ssg.py`
+  - note: this script preserves the `<title>` element in the header
 
 # todo
 
@@ -21,5 +27,5 @@
 - [x] add dark mode and toggle
 - [x] rework footer
 - [x] rework top bar
-- [ ] really overhaul the home page
+- [x] really overhaul the home page
   - possibly combine most / all sections into one long, scrolling page with animations and all that
