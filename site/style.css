@@ -1,105 +1,126 @@
 /* --- TYPOGRAPHY --- */
 :root {
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 /* inter-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/inter-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* inter-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/inter-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* inter-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url('./assets/fonts/inter-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* outfit-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/outfit-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/outfit-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* outfit-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/outfit-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/outfit-v15-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* outfit-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 600;
-  src: url('./assets/fonts/outfit-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/outfit-v15-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
 
 body {
   font-family: var(--font-body);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-body, .card, .custom-navbar, .custom-footer, .btn, h1, h2, h3, h4, h5, h6, p {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+body,
+.card,
+.custom-navbar,
+.custom-footer,
+.btn,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease !important;
 }
 
-h1, h2, h3, h4, h5, h6, .navbar-brand {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
   font-family: var(--font-heading);
 }
 
 /* --- CUSTOM LIGHT THEME (Softer, Warmer) --- */
 [data-bs-theme="light"] {
-  --bs-body-bg: #EFE8E2;        /* Warmer, deeper oat/beige */
-  --bs-body-color: #3b2f2f;     /* Deep warm brown/charcoal text */
-  
-  --rtv-primary: #b84335;       /* Rich rust/ruddy red */
+  --bs-body-bg: #efe8e2; /* Warmer, deeper oat/beige */
+  --bs-body-color: #3b2f2f; /* Deep warm brown/charcoal text */
+
+  --rtv-primary: #b84335; /* Rich rust/ruddy red */
   --rtv-primary-hover: #8f3126; /* Darker terracotta for hover */
-  
-  --header-bg: #62261f;         /* Medium dusty clay/brick */
-  --footer-bg: #E4DCD5;         /* Warm stone footer */
+
+  --header-bg: #62261f; /* Medium dusty clay/brick */
+  --footer-bg: #e4dcd5; /* Warm stone footer */
   --footer-text: #5c4d4a;
-  
+
   --secondary-border: #a89a95;
   --secondary-hover-bg: #8c7a73;
 }
 
 /* --- CUSTOM DARK THEME --- */
 [data-bs-theme="dark"] {
-  --bs-body-bg: #121826;        /* Deep midnight blue */
-  --bs-body-color: #e2e8f0;     /* Soft slate text */
-  
-  --rtv-primary: #f07159;       /* Vibrant coral/rust */
+  --bs-body-bg: #121826; /* Deep midnight blue */
+  --bs-body-color: #e2e8f0; /* Soft slate text */
+
+  --rtv-primary: #f07159; /* Vibrant coral/rust */
   --rtv-primary-hover: #d95840;
 
-  --header-bg: #090c14;         /* Very dark navy/black for depth */
+  --header-bg: #090c14; /* Very dark navy/black for depth */
   --footer-bg: #090c14;
   --footer-text: #64748b;
-  
+
   --secondary-border: #475569;
   --secondary-hover-bg: #334155;
 }
@@ -113,12 +134,22 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   transition: background-color 0.3s ease;
 }
 
+.navbar-brand {
+  font-size: 1.2rem !important; /* Smaller home link */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem; /* Larger other links */
+}
+
 /* Footer */
 .custom-footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
   border-top: 1px solid rgba(128, 128, 128, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 .custom-footer a {
   color: var(--rtv-primary);
@@ -173,4 +204,41 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 .theme-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+}
+
+/* --- TABS --- */
+.nav-tabs {
+  border-bottom: 1px solid var(--secondary-border);
+}
+
+.nav-tabs .nav-link {
+  color: var(--bs-body-color);
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--rtv-primary);
+}
+
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: var(--rtv-primary);
+  border-color: var(--rtv-primary);
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link.active {
+  color: #000;
+}
+
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
 }

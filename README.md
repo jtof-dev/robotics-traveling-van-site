@@ -18,8 +18,8 @@
 
 ## style
 
-- [ ] add dark mode and toggle
-- [ ] rework footer
-- [ ] rework top bar
+- [x] add dark mode and toggle
+- [x] rework footer
+- [x] rework top bar
 - [ ] really overhaul the home page
   - possibly combine most / all sections into one long, scrolling page with animations and all that
