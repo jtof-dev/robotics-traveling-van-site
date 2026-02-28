@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="view-transition" content="same-origin" />
     <title>Robot 1 - Robotics Traveling Van</title>
+    <script>
+      // Prevents "flash of incorrect theme" (FOIT)
+      (function () {
+        const theme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-bs-theme", theme);
+      })();
+    </script>
     <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
     <link
       rel="preload"

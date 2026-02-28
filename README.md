@@ -1,7 +1,6 @@
 # robotics-traveling-van-site
 
-- deployed to [github pages](https://jtof-dev.github.io/robotics-traveling-van-site/)
-- current outdated site is live [here](https://www.ceias.nau.edu/capstone/projects/ME/2026/F25toSp26_TravelingRobotics/)
+- deployed to [github pages](https://jtof-dev.github.io/robotics-traveling-van-site/) and to [nau.edu](https://www.ceias.nau.edu/capstone/projects/ME/2026/F25toSp26_TravelingRobotics/)
 
 # notes
 
@@ -14,12 +13,12 @@
 
 ## content
 
-- [ ] remove most ME content
-- [ ] get info from EEs for the `about us` section
+- [x] remove most ME content
+- [x] get info from EEs for the `about us` section
   - ask for new written bios, linkedin links, possibly resume, headshots, and any other links
 - [ ] re-write robots 1 and 2 sections
-- [ ] add our own documents (instead of the ME ones)
-- [ ] get new photos for gallery
+- [x] add our own documents (instead of the ME ones)
+- [x] get new photos for gallery
 - [ ] flesh out project description page
 
 ## style
@@ -30,4 +29,3 @@
 - [x] really overhaul the home page
   - possibly combine most / all sections into one long, scrolling page with animations and all that
 - [ ] fix page flashing dark while changing pages on light mode
-- [ ] fix icons blinking while switching pages
