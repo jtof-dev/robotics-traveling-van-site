@@ -113,20 +113,15 @@
       <section class="my-4">
         <h2>Description</h2>
         <p>
-          Robot 2 is a Ball-on-Beam dynamic balancing prototype developed as an
-          educational control-system demonstrator. The system uses an ultrasonic
-          distance sensor to measure the ball position along the beam, a NEMA 17
-          stepper motor to tilt the beam, and a PID controller running on a
-          Raspberry Pi Pico to stabilize the ball around a target position.
+          Robot 2 is a Ball-on-Beam dynamic balancing robot developed as an
+          educational control-system demonstrator. The system uses a Time of Flight sensor to measure the ball position along the beam, a NEMA 17
+          stepper motor to tilt the beam, and a PID controller running on an RP2040 board to stabilize the ball around a target position, usually the center of the beam.
         </p>
         <p>
-          This prototype was built to answer key questions about sensor latency,
-          actuator torque requirements, and PID tuning for an unstable system.
-          It also serves as a stepping stone for next semester’s Ball-on-Plate
-          robot by validating the core sensing and actuation approach in a
-          simpler one-dimensional setup. The mechanical design includes a
+          This robot was built to educate schoolkids about core physics and robotics concepts, focusing on how a robot can use a sensor to balance a ball in real-time.
+          The mechanical design includes a
           3D-printed base, hinge, beam supports, and couplers that interface the
-          stepper shaft to the beam.
+          stepper shaft to the beam that house the RP2040 board, ToF sensor, and motor.
         </p>
         <p>
           Educationally, Robot 2 allows K–12 students to see how changing
@@ -136,15 +131,6 @@
           between response speed and overshoot.
         </p>
       </section>
-
-      <!--
-      <section class="my-4">
-        <h2>Documentation</h2>
-        <ul>
-          <li><a href="docs/robot2-manual.pdf" target="_blank">Robot 2 Manual (PDF)</a></li>
-        </ul>
-      </section>
-      -->
     </div>
 
     <!-- {{start of footer}} -->
