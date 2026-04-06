@@ -1,6 +1,8 @@
 # robotics-traveling-van-site
 
-- deployed to [github pages](https://jtof-dev.github.io/robotics-traveling-van-site/) and to [nau.edu](https://www.ceias.nau.edu/capstone/projects/ME/2026/F25toSp26_TravelingRobotics/)
+the landing page for the Robotics Traveling Van Capstone project! has lots of info on our [inverted pendulum robot](https://github.com/jtof-dev/robotics-traveling-van-ipr) and our [ball and beam balance robot](https://github.com/jtof-dev/robotics-traveling-van-bbb)
+
+- deployed to [github pages](https://jtof-dev.github.io/robotics-traveling-van-site/) and to [sce.nau.edu](https://sce.nau.edu/capstone/projects/EE/2026/RoboVan/)
 
 # notes
 
