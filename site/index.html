@@ -1,665 +1,535 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="view-transition" content="same-origin" />
-    <title>Home - Robotics Traveling Van</title>
-    <script>
-      // Prevents "flash of incorrect theme" (FOIT)
-      (function () {
-        const theme = localStorage.getItem("theme") || "dark";
-        document.documentElement.setAttribute("data-bs-theme", theme);
-      })();
-    </script>
-    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
-    <link
-      rel="preload"
-      href="./assets/icons/RTVBrandmarkNoOutline.webp"
-      as="image"
-    />
 
-    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="view-transition" content="same-origin" />
+  <title>Home | RTV</title>
+  <script>
+    (function () {
+      const theme = localStorage.getItem("theme") || "dark";
+      document.documentElement.setAttribute("data-bs-theme", theme);
+    })();
+  </script>
+  <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="preload" href="./assets/icons/RTVBrandmarkNoOutline.webp" as="image" />
 
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
 
-  <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3">
-      <div class="container-fluid">
-        <a
-          class="navbar-brand d-flex align-items-center fw-bold fs-4"
-          href="./"
-        >
-          <img
-            src="./assets/icons/RTVBrandmarkNoOutline.webp"
-            alt="RTV Logo"
-            height="40"
-            class="me-2"
-          />
-          Home
-        </a>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
 
-        <div class="d-flex align-items-center order-lg-last">
-          <button
-            class="btn theme-btn me-2"
-            id="theme-toggle"
-            type="button"
-            aria-label="Toggle Theme"
-          >
-            <img
-              id="theme-icon"
-              class="theme-icon-img"
-              src="./assets/icons/lightMode.svg"
-              alt="Toggle theme"
-              width="20"
-              height="20"
-            />
-          </button>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="./">
+        <img src="./assets/icons/RTVBrandmarkNoOutline.webp" alt="RTV Logo" height="40" class="me-2" />
+        Home
+      </a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="./projectDescription/">Project Description</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./documents/">Documents</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./IPR/">Inverted Pendulum Robot</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./BBB/">Ball Beam Balance Robot</a>
-            </li>
-          </ul>
-        </div>
+      <div class="d-flex align-items-center order-lg-last">
+        <button class="btn theme-btn me-2" id="theme-toggle" type="button" aria-label="Toggle Theme">
+          <img id="theme-icon" class="theme-icon-img" src="./assets/icons/lightMode.svg" alt="Toggle theme" width="20"
+            height="20" />
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-    </nav>
 
-    <!-- {{end of header}} -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./projectDescription/">Project Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./documents/">Documents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./IPR/">Inverted Pendulum Robot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./BBB/">Ball Beam Balance Robot</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <div class="container my-5 flex-grow-1">
-      <h1 class="text-center mb-4 display-4 fw-bold">
-        Traveling Robotics Van (RTV)
-      </h1>
-      <p class="text-center lead mb-5">
-        An interactive K–12 outreach project focused on teaching engineering
-        principles through hands-on robotics demonstrations.
+  <!-- {{end of header}} -->
+
+  <div class="container my-5 flex-grow-1">
+    <h1 class="text-center mb-4 display-4 fw-bold">
+      Traveling Robotics Van (RTV)
+    </h1>
+    <p class="text-center lead mb-5">
+      An interactive K–12 outreach project focused on teaching engineering
+      principles through hands-on robotics demonstrations.
+    </p>
+    <hr class="mb-5" />
+
+    <section class="my-5">
+      <h2 class="mb-3">Project Overview</h2>
+      <p class="fs-5">
+        The Traveling Robotics Van (RTV) project aims to develop portable,
+        engaging robotic systems that introduce K–12 students to mechanical
+        engineering, electronics, and programming. Our 2025–2026 project
+        includes the development of two demonstration robots: a self-balancing
+        pendulum robot (Robot 1) and a ball-on-beam control robot (Robot 2).
+        These robots are designed to be durable, transportable, and
+        educational, allowing future outreach teams to easily teach core STEM
+        concepts through live demonstrations.
       </p>
-      <hr class="mb-5" />
+    </section>
 
-      <section class="my-5">
-        <h2 class="mb-3">Project Overview</h2>
-        <p class="fs-5">
-          The Traveling Robotics Van (RTV) project aims to develop portable,
-          engaging robotic systems that introduce K–12 students to mechanical
-          engineering, electronics, and programming. Our 2025–2026 project
-          includes the development of two demonstration robots: a self-balancing
-          pendulum robot (Robot 1) and a ball-on-beam control robot (Robot 2).
-          These robots are designed to be durable, transportable, and
-          educational, allowing future outreach teams to easily teach core STEM
-          concepts through live demonstrations.
-        </p>
-      </section>
+    <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="robots-tab" data-bs-toggle="tab" data-bs-target="#robots-tab-pane"
+          type="button" role="tab" aria-controls="robots-tab-pane" aria-selected="true">
+          Robots
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-tab-pane" type="button"
+          role="tab" aria-controls="team-tab-pane" aria-selected="false">
+          Team
+        </button>
+      </li>
+    </ul>
 
-      <!-- Tabs Navigation -->
-      <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="robots-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#robots-tab-pane"
-            type="button"
-            role="tab"
-            aria-controls="robots-tab-pane"
-            aria-selected="true"
-          >
-            Robots
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="team-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#team-tab-pane"
-            type="button"
-            role="tab"
-            aria-controls="team-tab-pane"
-            aria-selected="false"
-          >
-            Team
-          </button>
-        </li>
-      </ul>
+    <!-- Tabs Content -->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="robots-tab-pane" role="tabpanel" aria-labelledby="robots-tab"
+        tabindex="0">
+        <section class="my-5">
+          <h2 class="mb-4">Our Robots</h2>
 
-      <!-- Tabs Content -->
-      <div class="tab-content" id="myTabContent">
-        <div
-          class="tab-pane fade show active"
-          id="robots-tab-pane"
-          role="tabpanel"
-          aria-labelledby="robots-tab"
-          tabindex="0"
-        >
-          <section class="my-5">
-            <h2 class="mb-4">Our Robots</h2>
-
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="card mb-4 shadow-sm h-100">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img
-                        src="./assets/images/Robot1Image.webp"
-                        class="img-fluid rounded-start"
-                        alt="Robot 1 Prototype"
-                        style="max-height: 350px; object-fit: cover"
-                      />
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title fs-4 mb-3">
-                          Robot 1 – Self-Balancing Pendulum
-                        </h5>
-                        <p class="card-text">
-                          A reaction-wheel-based pendulum robot used to teach
-                          concepts such as PID control, angular momentum, and
-                          dynamic stability. Designed to be rugged and portable
-                          for repeated outreach demonstrations.
-                        </p>
-                        <a href="./IPR/" class="btn btn-custom-primary"
-                          >Learn More</a
-                        >
-                      </div>
-                    </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card mb-4 shadow-sm h-100">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="./assets/images/IPR_mainphoto.webp" class="img-fluid rounded-start"
+                      alt="Robot 1 Prototype" style="max-height: 350px; object-fit: cover" />
                   </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <div class="card mb-4 shadow-sm h-100">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img
-                        src="./assets/images/Robot2Image.webp"
-                        class="img-fluid rounded-start"
-                        alt="Robot 2 Prototype"
-                        style="max-height: 350px; object-fit: cover"
-                      />
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title fs-4 mb-3">
-                          Robot 2 – Ball-on-Beam System
-                        </h5>
-                        <p class="card-text">
-                          A control-theory demonstration robot that uses a
-                          stepper-motor-driven beam to balance a rolling ball.
-                          This system teaches students about feedback control,
-                          sensors, and dynamic response in real-world
-                          engineering.
-                        </p>
-                        <a href="./BBB/" class="btn btn-custom-primary"
-                          >Learn More</a
-                        >
-                      </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title fs-4 mb-3">
+                        Robot 1 – Self-Balancing Pendulum
+                      </h5>
+                      <p class="card-text">
+                        A reaction-wheel-based pendulum robot used to teach
+                        concepts such as PID control, angular momentum, and
+                        dynamic stability. Designed to be rugged and portable
+                        for repeated outreach demonstrations.
+                      </p>
+                      <a href="./IPR/" class="btn btn-custom-primary">Learn More</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-          <section class="my-5">
-            <h2 class="text-center">Gallery</h2>
-            <p class="text-center">
-              A collection of photos and videos of our robots and team.
-            </p>
-            <hr />
-            <h3 class="text-center">Promo Video</h3>
-            <div class="row justify-content-center">
-              <div class="col-md-3">
-                <div class="ratio" style="--bs-aspect-ratio: 177.77%">
-                  <iframe
-                    src="https://www.youtube.com/embed/Llqt_Z5niqo"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="
-                      accelerometer;
-                      autoplay;
-                      clipboard-write;
-                      encrypted-media;
-                      gyroscope;
-                      picture-in-picture;
-                      web-share;
-                    "
-                    allowfullscreen
-                  ></iframe>
+
+            <div class="col-lg-6">
+              <div class="card mb-4 shadow-sm h-100">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="./assets/images/BBB_mainphoto.webp" class="img-fluid rounded-start"
+                      alt="Robot 2 Prototype" style="max-height: 350px; object-fit: cover" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title fs-4 mb-3">
+                        Robot 2 – Ball-on-Beam System
+                      </h5>
+                      <p class="card-text">
+                        A control-theory demonstration robot that uses a
+                        stepper-motor-driven beam to balance a rolling ball.
+                        This system teaches students about feedback control,
+                        sensors, and dynamic response in real-world
+                        engineering.
+                      </p>
+                      <a href="./BBB/" class="btn btn-custom-primary">Learn More</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <hr class="my-5" />
-            <h3 class="text-center">Inverted Pendulum Robot</h3>
-            <div class="d-flex flex-wrap justify-content-center gap-4">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot1CAD1.webp"
-                  class="img-fluid"
-                  alt="CAD Model of Robot 1"
-                  style="max-height: 400px"
-                />
+          </div>
+        </section>
+        <section class="my-5">
+<h2 class="text-center">Gallery</h2>
+          <p class="text-center">
+            A collection of photos and videos of our robots and team.
+          </p>
+          <hr />
+          <div class="row justify-content-center align-items-stretch gap-4">
+            
+            <div class="col-md-3 d-flex flex-column">
+              <h3 class="text-center">Promo Video</h3>
+              <div class="d-flex flex-grow-1 align-items-center justify-content-center">
+                <video 
+                  id="promoVideo" 
+                  controls 
+                  preload="metadata" 
+                  poster="./assets/images/promoVideoCover.webp"
+                  class="rounded shadow-sm"
+                  style="width: 100%; max-height: 600px; object-fit: contain; background: #000;"
+                >
+                  <source src="./assets/images/promoVideo720p.webm" type="video/webm">
+                  Your browser does not support the HTML5 video tag.
+                </video>
               </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot1CAD2.webp"
-                  class="img-fluid"
-                  alt="CAD Model of Robot 1"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot1Image.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 1"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/OldRobot1Pic1.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 1"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/OldRobot1Pic2.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 1"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot1Image2.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 1"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot1Pic1.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 1"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot1Pic2.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 1"
-                  style="max-height: 400px"
-                />
+              <div class="mt-3 text-center">
+                <a href="https://youtube.com/shorts/Llqt_Z5niqo" target="_blank" class="btn btn-custom-primary">
+                  View on YouTube
+                </a>
               </div>
             </div>
-            <hr class="my-5" />
-            <h3 class="text-center">Ball Beam Balance Robot</h3>
-            <div class="d-flex flex-wrap justify-content-center gap-4">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2CAD1.webp"
-                  class="img-fluid"
-                  alt="CAD Model of Robot 2"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2CAD2.webp"
-                  class="img-fluid"
-                  alt="CAD Model of Robot 2"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2CAD3.webp"
-                  class="img-fluid"
-                  alt="CAD Model of Robot 2"
-                  style="max-height: 400px"
-                />
-              </div>
 
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2Image.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 2"
-                  style="max-height: 400px"
+            <div class="col-md-8 d-flex flex-column">
+              <h3 class="text-center">Fall 2026 Poster</h3>
+              <div class="d-flex flex-grow-1 align-items-center justify-content-center text-center">
+                <img 
+                  src="./assets/documents/Spring2026Poster.webp" 
+                  alt="Fall 2026 Poster"
+                  class="img-fluid rounded shadow-sm" 
+                  style="width: auto; max-height: 600px; object-fit: contain;" 
                 />
               </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2Pic1.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 2"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2Pic2.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 2"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2Pic3.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 2"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2Pic4.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 2"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/Robot2Pic5.webp"
-                  class="img-fluid"
-                  alt="Image of Robot 2"
-                  style="max-height: 400px"
-                />
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/BatteriesPic1.webp"
-                  class="img-fluid"
-                  alt="Image of the batteries"
-                  style="max-height: 400px"
-                />
+              <div class="mt-3 text-center">
+                <button type="button" class="btn btn-custom-primary" data-bs-toggle="modal" data-bs-target="#posterModal">
+                  View Full Res
+                </button>
               </div>
             </div>
-          </section>
+
+          </div>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const videoPlayer = document.getElementById('promoVideo');
+              if(videoPlayer) {
+                videoPlayer.volume = 0.5;
+              }
+            });
+          </script>
+          <hr class="my-5" />
+          <h3 class="text-center">Inverted Pendulum Robot</h3>
+          <div class="d-flex flex-wrap justify-content-center gap-4">
+            <div class="gallery-item">
+              <img src="./assets/images/IPR_CAD1.webp" class="img-fluid" alt="CAD Model of IPR"
+                style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/IPR_CAD2.webp" class="img-fluid" alt="CAD Model of IPR"
+                style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/IPR_Old_Pic1.webp" class="img-fluid" alt="Old version of IPR"
+                style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/IPR_Old_Pic2.webp" class="img-fluid" alt="Old version of IPR"
+                style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/IPR_Pic1.webp" class="img-fluid" alt="Image of IPR" style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/IPR_Pic2.webp" class="img-fluid" alt="Image of IPR" style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/IPR_Pic3.webp" class="img-fluid" alt="Image of IPR" style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/IPR_Pic4.webp" class="img-fluid" alt="Image of IPR" style="max-height: 400px" />
+            </div>
+
+          </div>
+          <hr class="my-5" />
+          <h3 class="text-center">Ball Beam Balance Robot</h3>
+          <div class="d-flex flex-wrap justify-content-center gap-4">
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_CAD1.webp" class="img-fluid" alt="CAD Model of BBB"
+                style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_CAD2.webp" class="img-fluid" alt="CAD Model of BBB"
+                style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_CAD3.webp" class="img-fluid" alt="CAD Model of BBB"
+                style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_Pic1.webp" class="img-fluid" alt="Image of BBB" style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_Pic2.webp" class="img-fluid" alt="Image of BBB" style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_Pic3.webp" class="img-fluid" alt="Image of BBB" style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_Pic4.webp" class="img-fluid" alt="Image of BBB" style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_Pic5.webp" class="img-fluid" alt="Image of BBB" style="max-height: 400px" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_Pic6.webp" class="img-fluid" alt="Image of BBB" style="max-height: 400px" />
+            </div>
+
+            <div class="gallery-item">
+              <img src="./assets/images/BBB_Batteries.webp" class="img-fluid" alt="Image of the batteries"
+                style="max-height: 400px" />
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="team-tab-pane" role="tabpanel" aria-labelledby="team-tab" tabindex="0">
+        <section class="my-5">
+          <h2 class="text-center">Our Team</h2>
+          <p class="text-center">Meet our team members and mentors.</p>
+          <hr />
+
+          <div class="row row-cols-1 row-cols-lg-2 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <img src="./assets/images/HeadshotKyleDraper.webp" class="rounded-start"
+                      alt="Headshot of Kyle Draper" style="object-fit: cover; height: 100%; width: 100%" />
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Kyle Draper – Team Lead</h5>
+                      <p class="card-text">
+                        Coordinating the robot and keeping the vision and
+                        making sure every detail is accounted for, Kyle has
+                        been in charge of coordinating the team and making
+                        sure the physics for the robot lines up. They have
+                        also aided the team in the endeavors of everything
+                        with the project from assisting with the prototypes,
+                        circuitry, and creative process when needed. In his
+                        free time, Kyle a big fan watching movies and
+                        television.
+                      </p>
+                      <a href="https://www.linkedin.com/in/kyle-p-draper/" class="btn btn-primary"
+                        target="_blank">LinkedIn</a>
+                      <a href=".\assets\documents\ResumeKyleDraper2-27-26.pdf" class="btn btn-secondary"
+                        target="_blank">Resume</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <img src="./assets/images/HeadshotAndyBabcock.webp" class="rounded-start"
+                      alt="Headshot of Andy Babcock" style="object-fit: cover; height: 100%; width: 100%" />
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Andy Babcock – Head Software Engineer
+                      </h5>
+                      <p class="card-text">
+                        From C to C++ to HTML, Andy has coded both robots and
+                        the website. Aside from implementing PID logic in C++,
+                        they also aided in team organization and coordination
+                        with the Mechanical Engineers. In their free time,
+                        Andy play Super Smash Bros Melee and attends locals.
+                      </p>
+                      <a href="https://www.linkedin.com/in/andybabcock/" class="btn btn-primary"
+                        target="_blank">LinkedIn</a>
+                      <a href="./assets/documents/ResumeAndyBabcock2-25-26.pdf" class="btn btn-secondary"
+                        target="_blank">Resume</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <img src="./assets/images/HeadshotKadenZaremba.webp" class="rounded-start"
+                      alt="Headshot of Kaden Zaremba" style="object-fit: cover; height: 100%; width: 100%" />
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Kaden Zaremba – Creative Design Lead
+                      </h5>
+                      <p class="card-text">
+                        From brandmarks to presentation posters to social
+                        media videos, Kaden has created a multitude of
+                        graphical assets for and related to the Robotics
+                        Traveling Van project. He is also partly responsible
+                        for soldering and website synthesis. In his free time,
+                        Kaden likes playing video games and repairing broken
+                        video game consoles.
+                      </p>
+                      <a href="https://www.linkedin.com/in/kaden-zaremba/" class="btn btn-primary"
+                        target="_blank">LinkedIn</a>
+                      <a href=".\assets\documents\ResumeKadenZaremba2-6-26.pdf" class="btn btn-secondary"
+                        target="_blank">Resume</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <img src="./assets/images/HeadshotDavidJimenez.webp" class="rounded-start"
+                      alt="Headshot of David Jimenez" style="object-fit: cover; height: 100%; width: 100%" />
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        David Jimenez – Chief Manufacuterer
+                      </h5>
+                      <p class="card-text">
+                        David has helped with designing the circuit for robot
+                        2. He is also responsible for project documentation as
+                        well as assisting with soldering for the project. In
+                        his free time, David likes to be hike, camp, and be
+                        outdoors.
+                      </p>
+                      <a href="https://www.linkedin.com/in/davidkjimenez" class="btn btn-primary"
+                        target="_blank">LinkedIn</a>
+                      <a href=".\assets\documents\ResumeDavidJimenez2-27-26.pdf" class="btn btn-secondary"
+                        target="_blank">Resume</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="mt-5">Mentors and Sponsors</h3>
+          <div class="row row-cols-1 row-cols-lg-2 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <img src="./assets/images/HeadshotRES.webp" class="rounded-start"
+                      alt="Headshot of Professor Rodolfo Echevarria Solis"
+                      style="object-fit: cover; height: 100%; width: 100%" />
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Professor Rodolfo Echevarria Solis
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <img src="./assets/images/HeadshotMichaelSchafer.webp" class="rounded-start"
+                      alt="Headshot of Dr. Michael Shafer" style="object-fit: cover; height: 100%; width: 100%" />
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Dr. Michael Shafer</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Poster Modal -->
+  <div class="modal fade" id="posterModal" tabindex="-1" aria-labelledby="posterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content" style="background-color: rgba(0,0,0,0.9);">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white" id="posterModalLabel">Fall 2026 Poster</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div
-          class="tab-pane fade"
-          id="team-tab-pane"
-          role="tabpanel"
-          aria-labelledby="team-tab"
-          tabindex="0"
-        >
-          <section class="my-5">
-            <h2 class="text-center">Our Team</h2>
-            <p class="text-center">Meet our team members and mentors.</p>
-            <hr />
-
-            <div class="row row-cols-1 row-cols-lg-2 g-4">
-              <div class="col">
-                <div class="card h-100 shadow-sm">
-                  <div class="row g-0">
-                    <div class="col-md-5">
-                      <img
-                        src="./assets/images/HeadshotKyleDraper.webp"
-                        class="rounded-start"
-                        alt="Headshot of Kyle Draper"
-                        style="object-fit: cover; height: 100%; width: 100%"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body">
-                        <h5 class="card-title">Kyle Draper – Team Lead</h5>
-                        <p class="card-text">
-                          Coordinating the robot and keeping the vision and
-                          making sure every detail is accounted for, Kyle has
-                          been in charge of coordinating the team and making
-                          sure the physics for the robot lines up. They have
-                          also aided the team in the endeavors of everything
-                          with the project from assisting with the prototypes,
-                          circuitry, and creative process when needed. In his
-                          free time, Kyle a big fan watching movies and
-                          television.
-                        </p>
-                        <a
-                          href="https://www.linkedin.com/in/kyle-p-draper/"
-                          class="btn btn-primary"
-                          target="_blank"
-                          >LinkedIn</a
-                        >
-                        <a
-                          href=".\assets\documents\ResumeKyleDraper2-27-26.pdf"
-                          class="btn btn-secondary"
-                          target="_blank"
-                          >Resume</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100 shadow-sm">
-                  <div class="row g-0">
-                    <div class="col-md-5">
-                      <img
-                        src="./assets/images/HeadshotAndyBabcock.webp"
-                        class="rounded-start"
-                        alt="Headshot of Andy Babcock"
-                        style="object-fit: cover; height: 100%; width: 100%"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body">
-                        <h5 class="card-title">
-                          Andy Babcock – Head Software Engineer
-                        </h5>
-                        <p class="card-text">
-                          From C to C++ to HTML, Andy has coded both robots and
-                          the website. Aside from implementing PID logic in C++,
-                          they also aided in team organization and coordination
-                          with the Mechanical Engineers. In their free time,
-                          Andy play Super Smash Bros Melee and attends locals.
-                        </p>
-                        <a
-                          href="https://www.linkedin.com/in/andybabcock/"
-                          class="btn btn-primary"
-                          target="_blank"
-                          >LinkedIn</a
-                        >
-                        <a
-                          href="./assets/documents/ResumeAndyBabcock2-25-26.pdf"
-                          class="btn btn-secondary"
-                          target="_blank"
-                          >Resume</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100 shadow-sm">
-                  <div class="row g-0">
-                    <div class="col-md-5">
-                      <img
-                        src="./assets/images/HeadshotKadenZaremba.webp"
-                        class="rounded-start"
-                        alt="Headshot of Kaden Zaremba"
-                        style="object-fit: cover; height: 100%; width: 100%"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body">
-                        <h5 class="card-title">
-                          Kaden Zaremba – Creative Design Lead
-                        </h5>
-                        <p class="card-text">
-                          From brandmarks to presentation posters to social
-                          media videos, Kaden has created a multitude of
-                          graphical assets for and related to the Robotics
-                          Traveling Van project. He is also partly responsible
-                          for soldering and website synthesis. In his free time,
-                          Kaden likes playing video games and repairing broken
-                          video game consoles.
-                        </p>
-                        <a
-                          href="https://www.linkedin.com/in/kaden-zaremba/"
-                          class="btn btn-primary"
-                          target="_blank"
-                          >LinkedIn</a
-                        >
-                        <a
-                          href=".\assets\documents\ResumeKadenZaremba2-6-26.pdf"
-                          class="btn btn-secondary"
-                          target="_blank"
-                          >Resume</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100 shadow-sm">
-                  <div class="row g-0">
-                    <div class="col-md-5">
-                      <img
-                        src="./assets/images/HeadshotDavidJimenez.webp"
-                        class="rounded-start"
-                        alt="Headshot of David Jimenez"
-                        style="object-fit: cover; height: 100%; width: 100%"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body">
-                        <h5 class="card-title">
-                          David Jimenez – Chief Manufacuterer
-                        </h5>
-                        <p class="card-text">
-                          David has helped with designing the circuit for robot
-                          2. He is also responsible for project documentation as
-                          well as assisting with soldering for the project. In
-                          his free time, David likes to be hike, camp, and be
-                          outdoors.
-                        </p>
-                        <a
-                          href="https://www.linkedin.com/in/davidkjimenez"
-                          class="btn btn-primary"
-                          target="_blank"
-                          >LinkedIn</a
-                        >
-                        <a
-                          href=".\assets\documents\ResumeDavidJimenez2-27-26.pdf"
-                          class="btn btn-secondary"
-                          target="_blank"
-                          >Resume</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h3 class="mt-5">Mentors and Sponsors</h3>
-            <div class="row row-cols-1 row-cols-lg-2 g-4">
-              <div class="col">
-                <div class="card h-100 shadow-sm">
-                  <div class="row g-0">
-                    <div class="col-md-5">
-                      <img
-                        src="./assets/images/HeadshotRES.webp"
-                        class="rounded-start"
-                        alt="Headshot of Professor Rodolfo Echevarria Solis"
-                        style="object-fit: cover; height: 100%; width: 100%"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body">
-                        <h5 class="card-title">
-                          Professor Rodolfo Echevarria Solis
-                        </h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100 shadow-sm">
-                  <div class="row g-0">
-                    <div class="col-md-5">
-                      <img
-                        src="./assets/images/HeadshotMichaelSchafer.webp"
-                        class="rounded-start"
-                        alt="Headshot of Dr. Michael Shafer"
-                        style="object-fit: cover; height: 100%; width: 100%"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body">
-                        <h5 class="card-title">Dr. Michael Shafer</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+        <div class="modal-body p-0 position-relative"
+          style="overflow: hidden; display: flex; justify-content: center; align-items: center;">
+          <div
+            class="position-absolute bottom-0 start-50 translate-middle-x mb-4 z-3 d-flex gap-2 bg-dark rounded-pill p-2 shadow">
+            <button id="zoomOutBtn"
+              class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
+              style="width: 40px; height: 40px;" title="Zoom Out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-zoom-out"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                <path
+                  d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z" />
+                <path fill-rule="evenodd" d="M3 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+              </svg>
+            </button>
+            <button id="resetZoomBtn" class="btn btn-outline-light d-flex align-items-center justify-content-center"
+              title="Reset Zoom">
+              Reset
+            </button>
+            <button id="zoomInBtn"
+              class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
+              style="width: 40px; height: 40px;" title="Zoom In">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-zoom-in"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                <path
+                  d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z" />
+                <path fill-rule="evenodd"
+                  d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z" />
+              </svg>
+            </button>
+          </div>
+          <div id="panzoom-container"
+            style="cursor: grab; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+            <img src="./assets/documents/Spring2026PosterFullRes.webp" id="panzoom-image" alt="Full Res Poster"
+              draggable="false"
+              style="max-width: 100%; max-height: 100%; object-fit: contain; transform-origin: center center;" />
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- {{start of footer}} -->
+  <!-- {{start of footer}} -->
 
-    <footer class="custom-footer py-4 text-center mt-auto">
-      <div class="container">
-        <p class="mb-1 fw-medium">Made with love by the RTV Capstone Team</p>
-        <small>
-          This
-          <a
-            class="text-decoration-none fw-semibold"
-            href="https://github.com/jtof-dev/robotics-traveling-van-site"
-            target="_blank"
-            >website</a
-          >
-          is open-source, and licensed under
-          <a
-            class="text-decoration-none fw-semibold"
-            href="https://www.gnu.org/licenses/agpl-3.0.html"
-            target="_blank"
-            >AGPL-3</a
-          >
-        </small>
-      </div>
-    </footer>
+  <footer class="custom-footer py-4 text-center mt-auto">
+    <div class="container">
+      <p class="mb-1 fw-medium">Made with love by the RTV Capstone Team</p>
+      <small>
+        This
+        <a class="text-decoration-none fw-semibold" href="https://github.com/jtof-dev/robotics-traveling-van-site"
+          target="_blank">website</a>
+        is open-source, and licensed under
+        <a class="text-decoration-none fw-semibold" href="https://www.gnu.org/licenses/agpl-3.0.html"
+          target="_blank">AGPL-3</a>
+      </small>
+    </div>
+  </footer>
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
 
-    <script type="module" src="./js/script.js"></script>
-  </body>
+  <script type="module" src="./js/script.js"></script>
+</body>
+
 </html>

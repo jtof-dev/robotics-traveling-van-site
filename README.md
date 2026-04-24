@@ -35,7 +35,9 @@ the landing page for the Robotics Traveling Van Capstone project! has lots of in
 ## final list
 
 - [ ] add parts lists to both robots
-- [ ] add new poster and button to view / download high-res version
-- [ ] add new presentations / write-ups
+- [x] add new poster and button to view / download high-res version
+- [x] add new presentations / write-ups
 - [ ] add frutiger aero theme (stretch goal)
-- [ ] update naming conventions inside `assets/images/`, and possibly split into subfolders (least important)
+- [x] update naming conventions inside `assets/images/`, and possibly split into subfolders (least important)
+- [ ] read through and update *all* writeups on website
+- [ ] POLISH!!!!
