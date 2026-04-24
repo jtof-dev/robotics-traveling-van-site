@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Ball Beam Balance Robot - Robotics Traveling Van</title>
+    <script>
+      // Prevents "flash of incorrect theme" (FOIT)
+      (function () {
+        const theme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-bs-theme", theme);
+      })();
+    </script>
+    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="preload"
+      href="../assets/icons/RTVBrandmarkNoOutline.webp"
+      as="image"
+    />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand d-flex align-items-center fw-bold fs-4"
+          href="../"
+        >
+          <img
+            src="../assets/icons/RTVBrandmarkNoOutline.webp"
+            alt="RTV Logo"
+            height="40"
+            class="me-2"
+          />
+          Home
+        </a>
+
+        <div class="d-flex align-items-center order-lg-last">
+          <button
+            class="btn theme-btn me-2"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle Theme"
+          >
+            <img
+              id="theme-icon"
+              class="theme-icon-img"
+              src="../assets/icons/lightMode.svg"
+              alt="Toggle theme"
+              width="20"
+              height="20"
+            />
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../projectDescription/">Project Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../documents/">Documents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../IPR/">Inverted Pendulum Robot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../BBB/">Ball Beam Balance Robot</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- {{end of header}} -->
+
+    <!-- Page Content -->
+    <div class="container my-5 flex-grow-1">
+      <h1 class="text-center">Robot 2</h1>
+      <p class="text-center">Ball-on-Beam Dynamic Balancing Prototype</p>
+      <hr />
+
+      <div class="text-center my-4">
+        <img
+          src="../assets/images/BBB_mainphoto.webp"
+          alt="Robot 2 Prototype"
+          class="img-fluid"
+          style="max-width: 500px"
+        />
+        <p class="text-muted">
+          Robot 2 – Ball-on-Beam prototype used to explore feedback control and
+          sensor-based balancing.
+        </p>
+      </div>
+
+      <section class="my-4">
+        <h2>Description</h2>
+        <p>
+          Robot 2 is a Ball-on-Beam dynamic balancing robot developed as an
+          educational control-system demonstrator. The system uses a Time of Flight sensor to measure the ball position along the beam, a NEMA 17
+          stepper motor to tilt the beam, and a PID controller running on an RP2040 board to stabilize the ball around a target position, usually the center of the beam.
+        </p>
+        <p>
+          This robot was built to educate schoolkids about core physics and robotics concepts, focusing on how a robot can use a sensor to balance a ball in real-time.
+          The mechanical design includes a
+          3D-printed base, hinge, beam supports, and couplers that interface the
+          stepper shaft to the beam that house the RP2040 board, ToF sensor, and motor.
+        </p>
+        <p>
+          Educationally, Robot 2 allows K–12 students to see how changing
+          controller parameters affects system behavior in real time. By
+          watching the ball move and settle on the beam, students gain an
+          intuitive understanding of feedback, stability, and the tradeoffs
+          between response speed and overshoot.
+        </p>
+      </section>
+    </div>
+
+    <!-- {{start of footer}} -->
+
+    <footer class="custom-footer py-4 text-center mt-auto">
+      <div class="container">
+        <p class="mb-1 fw-medium">Made with love by the RTV Capstone Team</p>
+        <small>
+          This
+          <a
+            class="text-decoration-none fw-semibold"
+            href="https://github.com/jtof-dev/robotics-traveling-van-site"
+            target="_blank"
+            >website</a
+          >
+          is open-source, and licensed under
+          <a
+            class="text-decoration-none fw-semibold"
+            href="https://www.gnu.org/licenses/agpl-3.0.html"
+            target="_blank"
+            >AGPL-3</a
+          >
+        </small>
+      </div>
+    </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <script type="module" src="../js/script.js"></script>
+  </body>
+</html>
