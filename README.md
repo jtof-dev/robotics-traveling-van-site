@@ -21,7 +21,7 @@ the landing page for the Robotics Traveling Van Capstone project! has lots of in
 - [x] re-write robots 1 and 2 sections
 - [x] add our own documents (instead of the ME ones)
 - [x] get new photos for gallery
-- [ ] flesh out project description page
+- [x] flesh out project description page
 
 ## style
 
@@ -34,10 +34,9 @@ the landing page for the Robotics Traveling Van Capstone project! has lots of in
 
 ## final list
 
-- [ ] add parts lists to both robots
+- [x] add parts lists to both robots
 - [x] add new poster and button to view / download high-res version
 - [x] add new presentations / write-ups
-- [ ] add frutiger aero theme (stretch goal)
 - [x] update naming conventions inside `assets/images/`, and possibly split into subfolders (least important)
 - [ ] read through and update *all* writeups on website
 - [ ] POLISH!!!!
