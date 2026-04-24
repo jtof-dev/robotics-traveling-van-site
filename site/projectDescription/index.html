@@ -15,9 +15,7 @@
   </script>
   <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
   <link rel="preload" href="../assets/icons/RTVBrandmarkNoOutline.webp" as="image" />
-
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
-
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
@@ -42,18 +40,10 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="../projectDescription/">Project Description</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../documents/">Documents</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../IPR/">Inverted Pendulum Robot</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../BBB/">Ball Beam Balance Robot</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="../projectDescription/">Project Description</a></li>
+          <li class="nav-item"><a class="nav-link" href="../documents/">Documents</a></li>
+          <li class="nav-item"><a class="nav-link" href="../IPR/">Inverted Pendulum Robot</a></li>
+          <li class="nav-item"><a class="nav-link" href="../BBB/">Ball Beam Balance Robot</a></li>
         </ul>
       </div>
     </div>
@@ -61,105 +51,102 @@
 
   <!-- {{end of header}} -->
 
-    <div class="container my-5 flex-grow-1">
-      <h1 class="text-center">Project Description</h1>
-      <p class="text-center">Details about the overall project and goals.</p>
-      <hr />
+  <div class="container my-5 flex-grow-1">
+    <h1 class="text-center mb-5">Project Description</h1>
 
-      <section class="my-4">
-        <h2>Overview</h2>
-        <p>
-          The Robotics Traveling Van project is focused on developing two low 
-          cost, portable educational robots that demonstrate
-          core control system concepts for K-12 outreach. Sponsored by Dr.
-          Michael Shafer at Northern Arizona University, the project aims to
-          create safe, durable, and visually engaging platforms that help
-          students connect robot motion to ideas like feedback, stability, and
-          actuation.
-        </p>
-        <p>
-          The team is developing two systems: the Inverted Pendulum Robot, which maintains balance of an attached inverted pendulum 
-          while students interact with it, and the Ball Beam Balance Robot that balances a pingpong ball on a half-pipe beam. Both robots are
-          being designed to be mass producible, classroom friendly in size, and
-          robust enough for repeated demonstrations in a traveling van outreach
-          setting.
-        </p>
-      </section>
+    <section class="mb-5">
+      <h2 class="mb-3">Overview</h2>
+      <p class="fs-5">
+        The Robotics Traveling Van project is focused on developing two low-cost, portable educational robots that
+        demonstrate core control system concepts for K-12 outreach. Sponsored by Dr. Michael Shafer at Northern Arizona
+        University, the project aims to create safe, durable, and visually engaging platforms that help students connect
+        robot motion to ideas like feedback, stability, and actuation.
+      </p>
+      <p class="fs-5">
+        The team is developing two systems: the Inverted Pendulum Robot, which maintains balance of an attached inverted
+        pendulum while students interact with it, and the Ball Beam Balance Robot that balances a pingpong ball on a
+        half-pipe beam. Both robots are being designed to be mass producible, classroom friendly in size, and robust
+        enough for repeated demonstrations in a traveling van outreach setting.
+      </p>
+    </section>
 
-      <section class="my-4">
-        <h2>Approach</h2>
-        <p>
-          The project uses a structured design process that starts
-          with customer and engineering requirements, followed by a House of
-          Quality, benchmarking, and literature review to select concepts for
-          both robots (mostly handled by the Mechanical Engineering side of the team). 
-          The team created functional decompositions, morphological
-          charts, and Pugh charts to compare alternatives and choose final
-          designs that balance performance, safety, and cost.
-        </p>
-        <p>
-          For the Inverted Pendulum Robot, the team modeled the inverted pendulum dynamics,
-          performed controller design using methods such as PID and state space
-          analysis, and developed a robust frame that can survive classroom use. 
-          For the Ball Beam Balance Robot, the team benchmarked ball-on-plate
-          systems, derived ball-on-beam and motor torque equations, and built a
-          physical ball-on-beam prototype to validate sensing, actuation, and
-          control. Across both robots, the team used CAD modeling, 3D printing, 
-          electronics integration, and iterative prototyping informed by analysis
-          and testing.
-        </p>
-      </section>
+    <section class="mb-5">
+      <h2 class="mb-3">Approach</h2>
+      <p class="fs-5">
+        The project uses a structured design process that starts with customer and engineering requirements, followed by
+        a House of Quality, benchmarking, and literature review to select concepts for both robots (mostly handled by
+        the Mechanical Engineering side of the team). The team created functional decompositions, morphological charts,
+        and Pugh charts to compare alternatives and choose final designs that balance performance, safety, and cost.
+      </p>
+      <p class="fs-5">
+        For the Inverted Pendulum Robot, the team modeled the inverted pendulum dynamics, performed controller design
+        using methods such as PID and state space analysis, and developed a robust frame that can survive classroom use.
+        For the Ball Beam Balance Robot, the team benchmarked ball-on-plate systems, derived ball-on-beam and motor
+        torque equations, and built a physical ball-on-beam prototype to validate sensing, actuation, and control.
+        Across both robots, the team used CAD modeling, 3D printing, electronics integration, and iterative prototyping
+        informed by analysis and testing.
+      </p>
 
-      <section class="my-4">
-        <h2>Expected Outcomes</h2>
-        <p>By the end of the project, the team intends to deliver:</p>
-        <ul>
-          <li>
-            Two fully functional educational robots: an Inverted Pendulum Robot
-            and a Ball Beam Balance Robot suitable for K-12 classroom and outreach
-            demonstrations.
-          </li>
-          <li>
-            Robust, portable mechanical designs that meet size, durability, and
-            safety targets (enclosed wiring, emergency stop features, impact resistant frames, etc.).
-          </li>
-          <li>
-            Software with feedback controllers implemented(such as PID) that clearly show how
-            sensor measurements and control inputs affect robot motion in real
-            time.
-          </li>
-          <li>
-            Complete documentation, including design reports, CAD drawings,
-            bills of materials, wiring diagrams, and example classroom
-            activities that explain the underlying engineering principles.
-          </li>
-          <li>
-            A repeatable platform that can be manufactured in small batches for
-            the Robotics Traveling Van, enabling continued use in future
-            outreach and coursework.
-          </li>
-        </ul>
-      </section>
-    </div>
+      <div class="row mt-4">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <video class="w-50 mx-auto d-block rounded shadow-sm" autoplay loop muted playsinline
+            aria-label="Inverted Pendulum Robot Simulation">
+            <source src="../assets/images/IPR_sim.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-md-6">
+          <video class="w-50 mx-auto d-block rounded shadow-sm" autoplay loop muted playsinline
+            aria-label="Ball Beam Balance Robot Simulation">
+            <source src="../assets/images/BBB_sim.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
 
-<!-- {{start of footer}} -->
+    <section class="mb-5">
+      <h2 class="mb-3">Expected Outcomes</h2>
+      <p class="fs-5">By the end of the project, the team intends to deliver:</p>
+      <ul>
+        <li class="fs-5 mb-2">
+          Two fully functional educational robots: an Inverted Pendulum Robot and a Ball Beam Balance Robot suitable for
+          K-12 classroom and outreach demonstrations.
+        </li>
+        <li class="fs-5 mb-2">
+          Robust, portable mechanical designs that meet size, durability, and safety targets (enclosed wiring, emergency
+          stop features, impact resistant frames, etc.).
+        </li>
+        <li class="fs-5 mb-2">
+          Software with feedback controllers implemented (such as PID) that clearly show how sensor measurements and
+          control inputs affect robot motion in real time.
+        </li>
+        <li class="fs-5 mb-2">
+          Complete documentation, including design reports, CAD drawings, bills of materials, wiring diagrams, and
+          example classroom activities that explain the underlying engineering principles.
+        </li>
+        <li class="fs-5">
+          A repeatable platform that can be manufactured in small batches for the Robotics Traveling Van, enabling
+          continued use in future outreach and coursework.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- {{start of footer}} -->
 
   <footer class="custom-footer py-4 text-center mt-auto">
     <div class="container">
       <p class="mb-1 fw-medium">Made with love by the RTV Capstone Team</p>
       <small>
-        This
-        <a class="text-decoration-none fw-semibold" href="https://github.com/jtof-dev/robotics-traveling-van-site"
-          target="_blank">website</a>
-        is open-source, and licensed under
-        <a class="text-decoration-none fw-semibold" href="https://www.gnu.org/licenses/agpl-3.0.html"
-          target="_blank">AGPL-3</a>
+        This <a class="text-decoration-none fw-semibold" href="https://github.com/jtof-dev/robotics-traveling-van-site"
+          target="_blank">website</a> is open-source, and licensed under <a class="text-decoration-none fw-semibold"
+          href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">AGPL-3</a>
       </small>
     </div>
   </footer>
 
   <script src="../js/bootstrap.bundle.min.js"></script>
-
   <script type="module" src="../js/script.js"></script>
 </body>
 

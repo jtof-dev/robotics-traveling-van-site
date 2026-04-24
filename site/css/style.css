@@ -1,80 +1,63 @@
-/* --- TYPOGRAPHY --- */
+/* =========================================
+   1. TYPOGRAPHY & BASE STYLES
+   ========================================= */
 :root {
   --font-heading: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
 }
 
-/* inter-regular - latin */
+/* Inter (Body) */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/inter-v20-latin-regular.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* inter-500 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   src: url("../assets/fonts/inter-v20-latin-500.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* inter-600 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   src: url("../assets/fonts/inter-v20-latin-600.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* outfit-regular - latin */
+/* Outfit (Headings) */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/outfit-v15-latin-regular.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* outfit-500 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
   src: url("../assets/fonts/outfit-v15-latin-500.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* outfit-600 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Outfit";
   font-style: normal;
   font-weight: 600;
   src: url("../assets/fonts/outfit-v15-latin-600.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 body {
   font-family: var(--font-body);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-heading);
 }
 
 a {
@@ -86,164 +69,98 @@ a:hover {
   color: var(--rtv-primary-hover);
 }
 
-body,
-.card,
-.custom-navbar,
-.custom-footer,
-.btn,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease !important;
+/* Global Transitions for Theme Switching */
+body, .card, .custom-navbar, .custom-footer, .btn, h1, h2, h3, h4, h5, h6, p {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.navbar-brand {
-  font-family: var(--font-heading);
-}
-
-/* --- CUSTOM LIGHT THEME (Softer, Warmer) --- */
+/* =========================================
+   2. THEME VARIABLES (LIGHT & DARK)
+   ========================================= */
+   
+/* Light Theme (Softer, Warmer) */
 [data-bs-theme="light"] {
   --bs-body-bg: #efe8e2;
-  /* Warmer, deeper oat/beige */
   --bs-body-color: #3b2f2f;
-  /* Deep warm brown/charcoal text */
-
   --rtv-primary: #b84335;
-  /* Rich rust/ruddy red */
   --rtv-primary-hover: #8f3126;
-  /* Darker terracotta for hover */
-
   --header-bg: #62261f;
-  /* Medium dusty clay/brick */
   --footer-bg: #e4dcd5;
-  /* Warm stone footer */
   --footer-text: #5c4d4a;
-
   --secondary-border: #a89a95;
   --secondary-hover-bg: #8c7a73;
 }
 
-/* --- CUSTOM DARK THEME --- */
+/* Dark Theme (Midnight & Coral) */
 [data-bs-theme="dark"] {
   --bs-body-bg: #121826;
-  /* Deep midnight blue */
   --bs-body-color: #e2e8f0;
-  /* Soft slate text */
-
   --rtv-primary: #f07159;
-  /* Vibrant coral/rust */
   --rtv-primary-hover: #d95840;
-
   --header-bg: #090c14;
-  /* Very dark navy/black for depth */
   --footer-bg: #090c14;
   --footer-text: #64748b;
-
   --secondary-border: #475569;
   --secondary-hover-bg: #334155;
 }
 
-/* --- SHARED COMPONENTS --- */
+/* =========================================
+   3. GLOBAL COMPONENTS
+   ========================================= */
 
-/* Header Navbar */
+/* Navbar & Footer */
 .custom-navbar {
   background-color: var(--header-bg) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  transition: background-color 0.3s ease;
 }
-
 .navbar-brand {
   font-size: 1.2rem !important;
-  /* Smaller home link */
 }
-
 .navbar-nav .nav-link {
   font-size: 1.1rem;
-  /* Larger other links */
 }
-
-/* Footer */
 .custom-footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
   border-top: 1px solid rgba(128, 128, 128, 0.1);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
 }
 
-/* Custom Primary Button */
+/* Custom Buttons */
 .btn-custom-primary {
   background-color: var(--rtv-primary);
   border-color: var(--rtv-primary);
   color: #ffffff;
   font-weight: 500;
-  /* Removed the transition here since our global rule handles it now */
 }
-
 [data-bs-theme="dark"] .btn-custom-primary {
   color: #0f172a;
-  /* Dark text for contrast */
   font-weight: 600;
 }
-
 .btn-custom-primary:hover {
   background-color: var(--rtv-primary-hover);
   border-color: var(--rtv-primary-hover);
   color: #ffffff;
 }
-
 [data-bs-theme="dark"] .btn-custom-primary:hover {
   color: #ffffff;
 }
 
-/* Custom Secondary Button */
 .btn-custom-secondary {
   background-color: transparent;
   border-color: var(--secondary-border);
   color: var(--bs-body-color);
   font-weight: 500;
-  /* Removed the transition here since our global rule handles it now */
 }
-
 .btn-custom-secondary:hover {
   background-color: var(--secondary-hover-bg);
   border-color: var(--secondary-hover-bg);
   color: #ffffff;
 }
 
-/* Theme Toggle Button */
-.theme-btn {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.theme-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-}
-
-/* --- TABS --- */
+/* Navigation Tabs */
 .nav-tabs {
   border-bottom: 1px solid var(--secondary-border);
 }
-
 .nav-tabs .nav-link {
   color: var(--bs-body-color);
   background-color: transparent;
@@ -253,58 +170,23 @@ h6,
   font-weight: 500;
   transition: all 0.2s ease-in-out;
 }
-
 .nav-tabs .nav-link:hover {
   color: var(--rtv-primary);
 }
-
 .nav-tabs .nav-link.active {
   color: #fff;
   background-color: var(--rtv-primary);
   border-color: var(--rtv-primary);
 }
-
 [data-bs-theme="dark"] .nav-tabs .nav-link.active {
   color: #000;
 }
-
 .tab-content > .tab-pane {
   transform: translateY(-20px);
-  transition:
-    opacity 0.2s ease-out,
-    transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
-
 .tab-content > .tab-pane.show {
   transform: translateY(0);
-}
-
-
-.theme-btn .theme-icon-img {
-  filter: invert(1);
-}
-
-.theme-icon-img.spinning {
-  animation: spin 0.5s ease-in-out;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.doc-preview-img {
-  max-height: 200px;
-  object-fit: cover;
-}
-
-.gallery-item {
-  width: 30%;
 }
 
 /* Scroll to Top Button */
@@ -315,9 +197,9 @@ h6,
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: var(--header-bg);
+  background-color: var(--bs-body-bg);
   color: var(--bs-body-color);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--secondary-border);
   font-size: 1.2rem;
   display: flex;
   justify-content: center;
@@ -327,18 +209,149 @@ h6,
   opacity: 0;
   pointer-events: none;
   transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-
 .scroll-to-top-btn.show {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
-
 .scroll-to-top-btn:hover {
   transform: translateY(-3px);
   background-color: var(--secondary-hover-bg);
   color: var(--rtv-primary-hover);
+}
+
+/* =========================================
+   4. UI UTILITIES & ICONS
+   ========================================= */
+
+/* Theme Toggle Icon Animation */
+.theme-btn {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.theme-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.theme-btn .theme-icon-img {
+  filter: invert(1);
+}
+.theme-icon-img.spinning {
+  animation: spin 0.5s ease-in-out;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Dynamic SVG Masks */
+.dynamic-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor; 
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+.icon-zoom-out {
+  -webkit-mask-image: url('../assets/icons/zoomOut.svg');
+  mask-image: url('../assets/icons/zoomOut.svg');
+}
+.icon-zoom-in {
+  -webkit-mask-image: url('../assets/icons/zoomIn.svg');
+  mask-image: url('../assets/icons/zoomIn.svg');
+}
+
+/* =========================================
+   5. PAGE-SPECIFIC CLASSES
+   ========================================= */
+
+/* Images & Media */
+.showcase-img {
+  max-width: 500px;
+  width: 100%;
+}
+.robot-card-img {
+  max-height: 180px;
+  width: 100%;
+  object-fit: contain;
+}
+.promo-media {
+  width: auto;
+  max-height: 600px;
+  object-fit: contain;
+}
+#promoVideo.promo-media {
+  width: 100%;
+  background: #000;
+}
+.gallery-item {
+  width: 30%;
+}
+.gallery-img {
+  max-height: 400px;
+  /* cursor: pointer; */
+}
+
+.headshot-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.doc-preview-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover; 
+}
+
+/* Parts List Tables */
+.part-icon-box {
+  width: 120px;
+  height: 120px;
+}
+.part-icon-img {
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* Custom Modals (PanZoom) */
+.custom-modal-overlay {
+  background-color: rgba(0,0,0,0.9);
+}
+.modal-flex-center {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zoom-control-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panzoom-wrapper {
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panzoom-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform-origin: center center;
 }

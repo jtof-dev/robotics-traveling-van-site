@@ -15,9 +15,7 @@
   </script>
   <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
   <link rel="preload" href="../assets/icons/RTVBrandmarkNoOutline.webp" as="image" />
-
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
-
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
@@ -42,18 +40,10 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="../projectDescription/">Project Description</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../documents/">Documents</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../IPR/">Inverted Pendulum Robot</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../BBB/">Ball Beam Balance Robot</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="../projectDescription/">Project Description</a></li>
+          <li class="nav-item"><a class="nav-link" href="../documents/">Documents</a></li>
+          <li class="nav-item"><a class="nav-link" href="../IPR/">Inverted Pendulum Robot</a></li>
+          <li class="nav-item"><a class="nav-link" href="../BBB/">Ball Beam Balance Robot</a></li>
         </ul>
       </div>
     </div>
@@ -62,149 +52,180 @@
   <!-- {{end of header}} -->
 
   <div class="container my-5 flex-grow-1">
-    <h1 class="text-center">Inverted Pendulum Robot</h1>
-    <p class="text-center">Overview and details about the Inverted Pendulum Robot.</p>
-    <hr />
-
     <div class="text-center my-4">
-      <img src="../assets/images/IPR_mainphoto.webp" alt="Inverted Pendulum Robot Prototype" class="img-fluid rounded-4 shadow-sm"
-        style="max-width: 500px" />
+      <img src="../assets/images/IPR_mainphoto.webp" alt="Inverted Pendulum Robot Prototype"
+        class="img-fluid rounded-4 shadow-sm showcase-img" />
       <p class="text-muted mt-2">
-        Inverted Pendulum Robot
+        An Inverted Pendulum Robot used to demonstrate real-time physics concepts.
       </p>
     </div>
 
     <section class="my-4">
-      <h2>Description</h2>
-      <p>
-        The Inverted Pendulum Robot is a two-wheeled inverted pendulum designed to demonstrate
-        real-time feedback control and dynamic stability for K–12 STEM
-        outreach. The robot actively balances itself by measuring its tilt
-        angle, computing corrections through a PID controller, and adjusting
-        wheel motion to stay upright. This allows students to interact with
-        the robot physically while observing how control systems respond to
-        disturbances.
+      <p class="fs-5">
+        The Inverted Pendulum Robot is a two-wheeled inverted pendulum designed to demonstrate real-time feedback
+        control and dynamic stability for K–12 STEM outreach. The robot actively balances itself by measuring its tilt
+        angle, computing corrections through a PID controller, and adjusting wheel motion to stay upright. This allows
+        students to interact with the robot physically while observing how control systems respond to disturbances.
       </p>
-      <p>
-        The mechanical frame was 3D printed, allowing for quicker
-        mass-production so the robot can make it out to more schools quicker.
-        The system integrates an RP2040 board, quad-DC motors with encoders, a
-        magnetic encoder for tilt sensing, a layered chassis for organized
-        electronics, and a touchscreen for classroom interaction. All
+      <p class="fs-5">
+        The mechanical frame was 3D printed, allowing for quicker mass-production so the robot can make it out to more
+        schools quicker. The system integrates an RP2040 board, quad-DC motors with encoders, a magnetic encoder for
+        tilt sensing, a layered chassis for organized electronics, and a touchscreen for classroom interaction. All
         components were selected to be low-cost and quickly mass-producible.
       </p>
-      <p>
-        This prototype serves as a hands-on demonstration of core engineering
-        concepts such as system modeling, instability, feedback loops, and
-        controller tuning. It also lays the foundation for future
-        enhancements, including expanded data visualization and improved user
-        interaction for classroom demonstrations.
+      <p class="fs-5">
+        This robot serves as a hands-on demonstration of core engineering concepts such as system modeling, instability,
+        feedback loops, and controller tuning. It also lays the foundation for future enhancements, including expanded
+        data visualization and improved user interaction for classroom demonstrations.
       </p>
-    </section>
-
-<section class="my-5">
-        <h2 class="mb-4">Parts List</h2>
-        
-        <div class="card border-0 shadow-sm rounded-4 bg-body-tertiary overflow-hidden">
-          <div class="table-responsive">
-            <table class="table table-hover table-borderless align-middle mb-0">
-              <tbody>
-
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/IPR_motor.webp" alt="DC Motor with Encoder" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">DC Motor with Encoder</td>
-                </tr>
-
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/IPR_MotorDriver.webp" alt="TMC2208 Motor Driver" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">TMC2208 Motor Driver</td>
-                </tr>
-
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/IPR_magneticencoder.webp" alt="Magnetic Encoder" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">Magnetic Encoder</td>
-                </tr>
-                
-                <tr>
-                  <td class="text-center p-3" style="width: 180px;">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/shared_rp2040.webp" alt="Raspberry Pi Pico / RP2040 Board" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">Raspberry Pi Pico / RP2040 Board</td>
-                </tr>
-                
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/shared_touchscreen.webp" alt="ST7796S 4.0&quot; LCD Touchscreen" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">ST7796S 4.0" LCD Touchscreen</td>
-                </tr>
-
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/shared_battery.webp" alt="3.2V LiFePO4 Battery" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">3.2V LiFePO4 Battery</td>
-                </tr>
-
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/shared_bms.webp" alt="4S 30A 12.8V BMS" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">4S 30A 12.8V BMS</td>
-                </tr>
-
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/shared_charger.webp" alt="14.6 Volt 2A Battery Charger" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">14.6 Volt 2A Battery Charger</td>
-                </tr>
-
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/shared_buck.webp" alt="3.3V Buck Converter" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">3.3V Buck Converter</td>
-                </tr>
-
-                <tr>
-                  <td class="text-center p-3">
-                    <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                      <img src="../assets/images/shared_capacitor.webp" alt="470uF Electrolytic Capacitors" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                    </div>
-                  </td>
-                  <td class="fw-medium fs-5 px-3">470uF Electrolytic Capacitors And 1A 20V Schottky Diode</td>
-                </tr>
-
-              </tbody>
-            </table>
+      <div class="text-center mt-4">
+        <a href="https://github.com/jtof-dev/robotics-traveling-van-ipr" target="_blank"
+          class="btn btn-custom-primary btn-lg px-4">
+          View on GitHub
+        </a>
+      </div>
+      <div class="mt-5 text-center">
+        <div class="row justify-content-center w-100 mx-auto">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img src="../assets/images/IPR_schematic.webp" alt="IPR Schematic" class="w-100 rounded shadow-sm"
+              style="height: 400px; object-fit: contain;">
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img src="../assets/images/IPR_pcb.webp" alt="PCB Render 1" class="w-100 rounded shadow-sm"
+              style="height: 400px; object-fit: contain;">
+          </div>
+          <div class="col-md-4">
+            <img src="../assets/images/IPR_pcb2.webp" alt="PCB Render 2" class="w-100 rounded shadow-sm"
+              style="height: 400px; object-fit: contain;">
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <section class="my-5">
+      <h2 class="mb-4">Parts List</h2>
+
+      <div class="card border-0 shadow-sm rounded-4 bg-body-tertiary overflow-hidden">
+        <div class="table-responsive">
+          <table class="table table-hover table-borderless align-middle mb-0">
+            <tbody>
+
+              <tr>
+                <td class="text-center p-3" style="width: 150px;">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/IPR_motor.webp" alt="DC Motor with Encoder"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">DC Motor with Encoder</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/IPR_MotorDriver.webp" alt="TMC2208 Motor Driver"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">TMC2208 Motor Driver</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/IPR_magneticencoder.webp" alt="Magnetic Encoder"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">Magnetic Encoder</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/shared_rp2040.webp" alt="Raspberry Pi Pico / RP2040 Board"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">Raspberry Pi Pico / RP2040 Board</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/shared_touchscreen.webp" alt="ST7796S 4.0&quot; LCD Touchscreen"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">ST7796S 4.0" LCD Touchscreen</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/shared_battery.webp" alt="3.2V LiFePO4 Battery"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">3.2V LiFePO4 Battery</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/shared_bms.webp" alt="4S 30A 12.8V BMS"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">4S 30A 12.8V BMS</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/shared_charger.webp" alt="14.6 Volt 2A Battery Charger"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">14.6 Volt 2A Battery Charger</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/shared_buck.webp" alt="3.3V Buck Converter"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">3.3V Buck Converter</td>
+              </tr>
+
+              <tr>
+                <td class="text-center p-3">
+                  <div
+                    class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                    <img src="../assets/images/shared_capacitor.webp" alt="470uF Electrolytic Capacitors"
+                      class="img-fluid part-icon-img" />
+                  </div>
+                </td>
+                <td class="fw-medium fs-5 px-3">470uF Electrolytic Capacitors And 1A 20V Schottky Diode</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
   </div>
 
   <!-- {{start of footer}} -->
@@ -213,18 +234,14 @@
     <div class="container">
       <p class="mb-1 fw-medium">Made with love by the RTV Capstone Team</p>
       <small>
-        This
-        <a class="text-decoration-none fw-semibold" href="https://github.com/jtof-dev/robotics-traveling-van-site"
-          target="_blank">website</a>
-        is open-source, and licensed under
-        <a class="text-decoration-none fw-semibold" href="https://www.gnu.org/licenses/agpl-3.0.html"
-          target="_blank">AGPL-3</a>
+        This <a class="text-decoration-none fw-semibold" href="https://github.com/jtof-dev/robotics-traveling-van-site"
+          target="_blank">website</a> is open-source, and licensed under <a class="text-decoration-none fw-semibold"
+          href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">AGPL-3</a>
       </small>
     </div>
   </footer>
 
   <script src="../js/bootstrap.bundle.min.js"></script>
-
   <script type="module" src="../js/script.js"></script>
 </body>
 

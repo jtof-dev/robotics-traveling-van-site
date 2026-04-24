@@ -1,13 +1,14 @@
 // Get the directory where THIS script is located
 const scriptDir = new URL('.', import.meta.url).pathname;
 
+// ONE single DOMContentLoaded block for all setup logic
 document.addEventListener("DOMContentLoaded", () => {
+  
+  /* --- 1. THEME TOGGLE LOGIC --- */
   const toggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
   const htmlElement = document.documentElement;
 
-  // This builds the path relative to script.js
-  // Example: if script is at /js/script.js, this looks for /js/../assets/icons/
   const ICON_PATHS = {
     dark: new URL('../assets/icons/darkMode.svg', import.meta.url).href,
     light: new URL('../assets/icons/lightMode.svg', import.meta.url).href
@@ -16,36 +17,58 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme") || "dark";
   setTheme(savedTheme);
 
-  toggleBtn.addEventListener("click", () => {
-    if (themeIcon.classList.contains("spinning")) return;
-    themeIcon.classList.add("spinning");
+  if (toggleBtn && themeIcon) {
+    toggleBtn.addEventListener("click", () => {
+      if (themeIcon.classList.contains("spinning")) return;
+      themeIcon.classList.add("spinning");
 
-    const currentTheme = htmlElement.getAttribute("data-bs-theme");
-    const newTheme = currentTheme === "light" ? "dark" : "light";
+      const currentTheme = htmlElement.getAttribute("data-bs-theme");
+      const newTheme = currentTheme === "light" ? "dark" : "light";
 
-    setTimeout(() => {
-      setTheme(newTheme, false);
-    }, 250);
+      setTimeout(() => {
+        setTheme(newTheme, false);
+      }, 250);
 
-    setTimeout(() => {
-      themeIcon.classList.remove("spinning");
-      localStorage.setItem("theme", newTheme);
-    }, 500);
-  });
+      setTimeout(() => {
+        themeIcon.classList.remove("spinning");
+        localStorage.setItem("theme", newTheme);
+      }, 500);
+    });
+  }
 
   function setTheme(theme, save = true) {
     htmlElement.setAttribute("data-bs-theme", theme);
     if (save) {
       localStorage.setItem("theme", theme);
     }
-    
-    // Use the dynamically generated absolute URL
-    themeIcon.src = ICON_PATHS[theme];
+    if (themeIcon) {
+      themeIcon.src = ICON_PATHS[theme];
+    }
   }
 
-  // Pan and Zoom logic for modal
-  const panzoomContainer = document.getElementById('panzoom-container');
+  /* --- 2. VIDEO SETUP --- */
+  const videoPlayer = document.getElementById('promoVideo');
+  if (videoPlayer) {
+    videoPlayer.volume = 0.5;
+  }
+
+  /* --- 3. DYNAMIC POSTER MODAL LOGIC --- */
+  const posterModal = document.getElementById('posterModal');
   const panzoomImage = document.getElementById('panzoom-image');
+  const modalTitle = document.getElementById('posterModalLabel'); // Added this!
+  
+  if (posterModal && panzoomImage) {
+    posterModal.addEventListener('show.bs.modal', event => {
+      const button = event.relatedTarget;
+      const imgSrc = button.getAttribute('data-image-src');
+      if (imgSrc) {
+        panzoomImage.src = imgSrc;
+      }
+    });
+  }
+
+  /* --- 4. PAN AND ZOOM LOGIC --- */
+  const panzoomContainer = document.getElementById('panzoom-container');
   const zoomInBtn = document.getElementById('zoomInBtn');
   const zoomOutBtn = document.getElementById('zoomOutBtn');
   const resetZoomBtn = document.getElementById('resetZoomBtn');
@@ -59,11 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     panzoomContainer.style.touchAction = 'none';
 
     function updateTransform(smooth = true) {
-      if (smooth) {
-        panzoomImage.style.transition = 'transform 0.1s ease-out';
-      } else {
-        panzoomImage.style.transition = 'none';
-      }
+      panzoomImage.style.transition = smooth ? 'transform 0.1s ease-out' : 'none';
       panzoomImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
     }
 
@@ -106,19 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     panzoomContainer.addEventListener('wheel', (e) => {
       e.preventDefault();
-      if (e.deltaY < 0) {
-        scale = Math.min(scale + 0.2, 5);
-      } else {
-        scale = Math.max(scale - 0.2, 0.5);
-      }
+      scale = e.deltaY < 0 ? Math.min(scale + 0.2, 5) : Math.max(scale - 0.2, 0.5);
       updateTransform(true);
     }, { passive: false });
 
+    // Touch logic for mobile pinch/zoom
     let initialPinchDistance = null;
     let initialScale = 1;
 
     panzoomContainer.addEventListener('touchstart', (e) => {
-      e.preventDefault(); // Prevent native scroll and zoom
+      e.preventDefault(); 
       if (e.touches.length === 1) {
         isDragging = true;
         startX = e.touches[0].clientX - translateX;
@@ -135,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('touchmove', (e) => {
       if (e.touches.length === 1 && isDragging) {
-        // Only prevent default if we are targeting the container to not break scrolling elsewhere
         if (e.target === panzoomContainer || panzoomContainer.contains(e.target)) {
           e.preventDefault();
         }
@@ -170,7 +185,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Reset zoom when modal is closed
-    const posterModal = document.getElementById('posterModal');
     if (posterModal) {
       posterModal.addEventListener('hidden.bs.modal', () => {
         scale = 1;
@@ -181,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Scroll to Top Button
+  /* --- 5. SCROLL TO TOP BUTTON --- */
   const scrollToTopBtn = document.createElement("button");
   scrollToTopBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>';
   scrollToTopBtn.className = "scroll-to-top-btn";
@@ -202,4 +216,5 @@ document.addEventListener("DOMContentLoaded", () => {
       behavior: "smooth"
     });
   });
+
 });

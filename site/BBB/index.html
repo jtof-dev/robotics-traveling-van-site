@@ -15,9 +15,7 @@
   </script>
   <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
   <link rel="preload" href="../assets/icons/RTVBrandmarkNoOutline.webp" as="image" />
-
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
-
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
@@ -42,18 +40,10 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="../projectDescription/">Project Description</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../documents/">Documents</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../IPR/">Inverted Pendulum Robot</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../BBB/">Ball Beam Balance Robot</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="../projectDescription/">Project Description</a></li>
+          <li class="nav-item"><a class="nav-link" href="../documents/">Documents</a></li>
+          <li class="nav-item"><a class="nav-link" href="../IPR/">Inverted Pendulum Robot</a></li>
+          <li class="nav-item"><a class="nav-link" href="../BBB/">Ball Beam Balance Robot</a></li>
         </ul>
       </div>
     </div>
@@ -61,171 +51,153 @@
 
   <!-- {{end of header}} -->
 
-  <!-- Page Content -->
-  <div class="container my-5 flex-grow-1">
-    <h1 class="text-center">Ball Beam Balance Robot</h1>
-    <p class="text-center">Ball Beam Balance Robot</p>
-    <hr />
+<div class="container my-5 flex-grow-1">
 
-    <div class="text-center my-4">
-      <img src="../assets/images/BBB_mainphoto.webp" alt="Ball Beam Balance Robot Prototype" class="img-fluid"
-        style="max-width: 500px" />
-      <p class="text-muted">
-        Ball Beam Balance Robot used to explore feedback control and
-        sensor-based balancing.
-      </p>
+  <div class="text-center my-4">
+    <img src="../assets/images/BBB_mainphoto.webp" alt="Ball Beam Balance Robot Prototype" class="img-fluid showcase-img" />
+    <p class="text-muted">
+      A Ball Beam Balance Robot used to explore feedback control and sensor-based balancing.
+    </p>
+  </div>
+
+  <section class="my-4">
+    <p class="fs-5">
+      The Ball Beam Balance Robot is an educational, 2-D control-system demonstrator. The system uses a Time of Flight sensor to measure the ball position along the beam, a NEMA 17 stepper motor to tilt the beam, and a PID controller running on an RP2040 board to stabilize the ball around a target position, usually the center of the beam or chosen on the touchscreen.
+    </p>
+    <p class="fs-5">
+      This robot was built to educate schoolkids about core physics and robotics concepts, focusing on how a robot can use a sensor to balance a ball in real-time. The mechanical design includes a 3D-printed base, hinge, beam supports, and couplers that interface the stepper shaft to the beam that house the RP2040 board, Time of Flight sensor, and motor.
+    </p>
+    <p class="fs-5">
+      Educationally, Ball Beam Balance Robot allows K–12 students to see how changing controller parameters affects system behavior in real time. By watching the ball move and settle on the beam, students gain an intuitive understanding of feedback, stability, and the tradeoffs between response speed and overshoot.
+    </p>
+    <div class="text-center mt-4">
+      <a href="https://github.com/jtof-dev/robotics-traveling-van-bbb" target="_blank" class="btn btn-custom-primary btn-lg px-4">
+        View on GitHub
+      </a>
     </div>
-
-    <section class="my-4">
-      <h2>Description</h2>
-      <p>
-        The Ball Beam Balance Robot was developed as an
-        educational control-system demonstrator. The system uses a Time of Flight sensor to measure the ball position
-        along the beam, a NEMA 17
-        stepper motor to tilt the beam, and a PID controller running on an RP2040 board to stabilize the ball around a
-        target position, usually the center of the beam.
-      </p>
-      <p>
-        This robot was built to educate schoolkids about core physics and robotics concepts, focusing on how a robot can
-        use a sensor to balance a ball in real-time.
-        The mechanical design includes a
-        3D-printed base, hinge, beam supports, and couplers that interface the
-        stepper shaft to the beam that house the RP2040 board, ToF sensor, and motor.
-      </p>
-      <p>
-        Educationally, Ball Beam Balance Robot allows K–12 students to see how changing
-        controller parameters affects system behavior in real time. By
-        watching the ball move and settle on the beam, students gain an
-        intuitive understanding of feedback, stability, and the tradeoffs
-        between response speed and overshoot.
-      </p>
-    </section>
-
-    <section class="my-5">
-      <h2 class="mb-4">Parts List</h2>
-
-      <div class="card border-0 shadow-sm rounded-4 bg-body-tertiary overflow-hidden">
-        <div class="table-responsive">
-          <table class="table table-hover table-borderless align-middle mb-0">
-            <tbody>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/BBB_ToF.webp" alt="VL53L0X Time of Flight Sensor" class="img-fluid"
-                      style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">VL53L0X Time of Flight Sensor</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/BBB_motordriver.webp" alt="TMC2209 Stepper Motor Driver"
-                      class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">TMC2209 Stepper Motor Driver</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/BBB_motor.webp" alt="NEMA 17 12V Stepper Motor" class="img-fluid"
-                      style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">NEMA 17 12V Stepper Motor</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3" style="width: 180px;">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/shared_rp2040.webp" alt="Raspberry Pi Pico / RP2040 Board"
-                      class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">Raspberry Pi Pico / RP2040 Board</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/shared_touchscreen.webp" alt="ST7796S 4.0&quot; LCD Touchscreen"
-                      class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">ST7796S 4.0" LCD Touchscreen</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/shared_battery.webp" alt="3.2V LiFePO4 Battery" class="img-fluid"
-                      style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">3.2V LiFePO4 Battery</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/shared_bms.webp" alt="4S 30A 12.8V BMS" class="img-fluid"
-                      style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">4S 30A 12.8V BMS</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/shared_charger.webp" alt="14.6 Volt 2A Battery Charger" class="img-fluid"
-                      style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">14.6 Volt 2A Battery Charger</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/shared_buck.webp" alt="3.3V Buck Converter" class="img-fluid"
-                      style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">3.3V Buck Converter</td>
-              </tr>
-
-              <tr>
-                <td class="text-center p-3">
-                  <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
-                    style="width: 120px; height: 120px;">
-                    <img src="../assets/images/shared_capacitor.webp" alt="470uF Electrolytic Capacitors"
-                      class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-                  </div>
-                </td>
-                <td class="fw-medium fs-5 px-3">470uF Electrolytic Capacitors And 1A 20V Schottky Diode</td>
-              </tr>
-
-            </tbody>
-          </table>
+      <div class="mt-5 text-center">
+        <div class="row justify-content-center w-100 mx-auto">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img src="../assets/images/BBB_schematic.webp" alt="IPR Schematic" class="w-100 rounded shadow-sm"
+              style="height: 400px; object-fit: contain;">
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <img src="../assets/images/BBB_pcb.webp" alt="PCB Render 1" class="w-100 rounded shadow-sm"
+              style="height: 400px; object-fit: contain;">
+          </div>
+          <div class="col-md-4">
+            <img src="../assets/images/BBB_pcb2.webp" alt="PCB Render 2" class="w-100 rounded shadow-sm"
+              style="height: 400px; object-fit: contain;">
+          </div>
         </div>
       </div>
-    </section>
+  </section>
 
-  </div>
+  <section class="my-5">
+    <h2 class="mb-4">Parts List</h2>
+
+    <div class="card border-0 shadow-sm rounded-4 bg-body-tertiary overflow-hidden">
+      <div class="table-responsive">
+        <table class="table table-hover table-borderless align-middle mb-0">
+          <tbody>
+
+            <tr>
+              <td class="text-center p-3" style="width: 150px;">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/BBB_ToF.webp" alt="VL53L0X Time of Flight Sensor" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">VL53L0X Time of Flight Sensor</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/BBB_motordriver.webp" alt="TMC2209 Stepper Motor Driver" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">TMC2209 Stepper Motor Driver</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/BBB_motor.webp" alt="NEMA 17 12V Stepper Motor" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">NEMA 17 12V Stepper Motor</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/shared_rp2040.webp" alt="Raspberry Pi Pico / RP2040 Board" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">Raspberry Pi Pico / RP2040 Board</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/shared_touchscreen.webp" alt="ST7796S 4.0&quot; LCD Touchscreen" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">ST7796S 4.0" LCD Touchscreen</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/shared_battery.webp" alt="3.2V LiFePO4 Battery" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">3.2V LiFePO4 Battery</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/shared_bms.webp" alt="4S 30A 12.8V BMS" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">4S 30A 12.8V BMS</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/shared_charger.webp" alt="14.6 Volt 2A Battery Charger" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">14.6 Volt 2A Battery Charger</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/shared_buck.webp" alt="3.3V Buck Converter" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">3.3V Buck Converter</td>
+            </tr>
+
+            <tr>
+              <td class="text-center p-3">
+                <div class="bg-body rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center part-icon-box">
+                  <img src="../assets/images/shared_capacitor.webp" alt="470uF Electrolytic Capacitors" class="img-fluid part-icon-img" />
+                </div>
+              </td>
+              <td class="fw-medium fs-5 px-3">470uF Electrolytic Capacitors And 1A 20V Schottky Diode</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</div>
 
   <!-- {{start of footer}} -->
 
@@ -233,18 +205,14 @@
     <div class="container">
       <p class="mb-1 fw-medium">Made with love by the RTV Capstone Team</p>
       <small>
-        This
-        <a class="text-decoration-none fw-semibold" href="https://github.com/jtof-dev/robotics-traveling-van-site"
-          target="_blank">website</a>
-        is open-source, and licensed under
-        <a class="text-decoration-none fw-semibold" href="https://www.gnu.org/licenses/agpl-3.0.html"
-          target="_blank">AGPL-3</a>
+        This <a class="text-decoration-none fw-semibold" href="https://github.com/jtof-dev/robotics-traveling-van-site"
+          target="_blank">website</a> is open-source, and licensed under <a class="text-decoration-none fw-semibold"
+          href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">AGPL-3</a>
       </small>
     </div>
   </footer>
 
   <script src="../js/bootstrap.bundle.min.js"></script>
-
   <script type="module" src="../js/script.js"></script>
 </body>
 
